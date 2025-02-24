@@ -84,4 +84,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Select all FAQ questions
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    // Close all open FAQs
+    faqItems.forEach((faq) => {
+      if (faq !== item) {
+        faq.classList.remove("active");
+      }
+    });
+
+    // Toggle the selected FAQ
+    item.classList.toggle("active");
+  });
+});
+
+
 
