@@ -426,6 +426,33 @@ body {
   opacity: 0.9;
 }
 
+/* Book With Us Button */
+.book-button {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.btn-book {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(45deg, #ff7b00, #ff2e63);
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  box-shadow: 0px 5px 15px rgba(255, 46, 99, 0.3);
+}
+
+.btn-book:hover {
+  background: linear-gradient(45deg, #ff2e63, #ff7b00);
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(255, 46, 99, 0.5);
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .services-grid {
