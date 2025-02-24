@@ -50,3 +50,21 @@ document.querySelector(".btn-book").addEventListener("mouseenter", function () {
   this.style.transition = "all 0.3s ease-in-out";
 });
 
+
+// blog section 
+// Add hover effect with slight zoom animation
+document.querySelectorAll(".blog-post").forEach((post) => {
+  post.addEventListener("mouseenter", () => {
+    post.style.transition = "all 0.3s ease-in-out";
+  });
+});
+
+// Lazy load blog images for performance boost
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".blog-img img");
+  images.forEach((img) => {
+    img.setAttribute("loading", "lazy");
+  });
+});
+
+
