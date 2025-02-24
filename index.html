@@ -699,7 +699,75 @@
       </div>
     </section>
 
-    <!-- Footer  -->
+    <!-- Contact Us Section -->
+    <section class="contact">
+      <div class="container">
+        <h2 data-aos="fade-up" data-aos-duration="1000">Contact Us</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="1500">
+          Get in touch with us for inquiries, collaborations, or project
+          bookings.
+        </p>
+
+        <div class="row">
+          <!-- Contact Form -->
+          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="2000">
+            <form action="contact.php" method="POST" class="contact-form">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="2000">
+            <div class="contact-info">
+              <div class="info-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Nairobi, Kenya</p>
+              </div>
+              <div class="info-box">
+                <i class="fas fa-envelope"></i>
+                <p>
+                  <a href="mailto:info@ambrelcrest.com">info@ambrelcrest.com</a>
+                </p>
+              </div>
+              <div class="info-box">
+                <i class="fas fa-phone-alt"></i>
+                <p><a href="tel:+254712345678">+254 712 345 678</a></p>
+              </div>
+              <div class="info-box">
+                <i class="fas fa-clock"></i>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+              </div>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Bootstrap JS (deferred for better performance) -->
     <script

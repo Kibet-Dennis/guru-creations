@@ -102,4 +102,16 @@ faqItems.forEach((item) => {
 });
 
 
+// Contact us  Section 
+document.querySelector(".contact-form").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent default form submission
+
+  // Simulate form submission process
+  setTimeout(() => {
+    alert("Your message has been sent successfully! We will get back to you soon.");
+    this.reset(); // Reset the form after submission
+  }, 1000);
+});
+
+
 
