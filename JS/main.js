@@ -113,5 +113,12 @@ document.querySelector(".contact-form").addEventListener("submit", function (eve
   }, 1000);
 });
 
+// Footer section 
+// Smooth scroll to top when clicking the logo
+document.querySelector(".footer-logo").addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+
 
 
