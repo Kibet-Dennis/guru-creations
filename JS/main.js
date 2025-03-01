@@ -29,14 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500);
   }, 4000);
 
-  // Parallax Scrolling Effect
-  window.addEventListener("scroll", function () {
-    let scrollPos = window.scrollY;
-    document.querySelector(".hero-text").style.transform = `translateY(${scrollPos * 0.5}px)`;
-    document.querySelector(".hero-img").style.transform = `translateY(${scrollPos * 0.3}px)`;
-  });
-
-  // Particle Hover Effect
+  // Particle Effect
   const canvas = document.getElementById("particle-canvas");
   const ctx = canvas.getContext("2d");
   let particles = [];
@@ -88,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
   resizeCanvas();
   animateParticles();
 });
-
 
 // Why choose us  section 
 // Adding Interactive Animations on Scroll
