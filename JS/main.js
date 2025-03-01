@@ -117,8 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Smooth Scroll to Section
-document.querySelector(".services").scrollIntoView({ behavior: "smooth" });
+window.onload = function () {
+  document.documentElement.scrollTop = 0;
+};
+
 // Book with us button 
 document.querySelector(".btn-book").addEventListener("mouseenter", function () {
   this.style.transition = "all 0.3s ease-in-out";
