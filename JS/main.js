@@ -8,6 +8,88 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Hero section 
+document.addEventListener("DOMContentLoaded", function () {
+  // Dynamic Text Animation
+  const textElement = document.getElementById("dynamic-text");
+  const textOptions = [
+    "Elevate Your Brand with Digital Excellence",
+    "Innovative Solutions for a Digital World",
+    "Your Success, Our Passion",
+    "Building the Future of Digital Media"
+  ];
+  let textIndex = 0;
+
+  setInterval(() => {
+    textElement.style.opacity = 0;
+    setTimeout(() => {
+      textElement.innerText = textOptions[textIndex];
+      textElement.style.opacity = 1;
+      textIndex = (textIndex + 1) % textOptions.length;
+    }, 500);
+  }, 4000);
+
+  // Parallax Scrolling Effect
+  window.addEventListener("scroll", function () {
+    let scrollPos = window.scrollY;
+    document.querySelector(".hero-text").style.transform = `translateY(${scrollPos * 0.5}px)`;
+    document.querySelector(".hero-img").style.transform = `translateY(${scrollPos * 0.3}px)`;
+  });
+
+  // Particle Hover Effect
+  const canvas = document.getElementById("particle-canvas");
+  const ctx = canvas.getContext("2d");
+  let particles = [];
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  function Particle(x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = Math.random() * 3 + 1;
+    this.speedX = Math.random() * 2 - 1;
+    this.speedY = Math.random() * 2 - 1;
+    this.alpha = 1;
+  }
+
+  Particle.prototype.update = function () {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    this.alpha -= 0.02;
+  };
+
+  Particle.prototype.draw = function () {
+    ctx.fillStyle = `rgba(255, 255, 255, ${this.alpha})`;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  };
+
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles = particles.filter(p => p.alpha > 0);
+    particles.forEach(particle => {
+      particle.update();
+      particle.draw();
+    });
+    requestAnimationFrame(animateParticles);
+  }
+
+  window.addEventListener("resize", resizeCanvas);
+  canvas.addEventListener("mousemove", function (event) {
+    for (let i = 0; i < 5; i++) {
+      particles.push(new Particle(event.clientX, event.clientY));
+    }
+  });
+
+  resizeCanvas();
+  animateParticles();
+});
+
+
 // Why choose us  section 
 // Adding Interactive Animations on Scroll
 document.addEventListener("DOMContentLoaded", function () {
