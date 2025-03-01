@@ -134,4 +134,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Back to top button 
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTopBtn = document.getElementById("back-to-top-btn");
+
+  // Show/hide button when scrolling
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  // Smooth scroll to top
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+
+
 
