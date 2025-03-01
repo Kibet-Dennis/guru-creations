@@ -119,6 +119,19 @@ document.querySelector(".footer-logo").addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// Whats up floating button 
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappBtn = document.querySelector(".whatsapp-float");
+
+  // Add bounce effect every 5 seconds
+  setInterval(() => {
+    whatsappBtn.classList.add("bounce");
+
+    setTimeout(() => {
+      whatsappBtn.classList.remove("bounce");
+    }, 1500);
+  }, 5000);
+});
 
 
 
