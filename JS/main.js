@@ -144,20 +144,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Our team section 
-// Add hover effect with slight zoom animation
-document.querySelectorAll(".team-member").forEach((member) => {
-  member.addEventListener("mouseenter", () => {
-    member.style.transition = "all 0.3s ease-in-out";
-  });
-});
-
-// Lazy load team images for better performance
 document.addEventListener("DOMContentLoaded", function () {
+  // Add slight hover effect on team members
+  document.querySelectorAll(".team-member").forEach((member) => {
+    member.addEventListener("mouseenter", () => {
+      member.style.transition = "all 0.3s ease-in-out";
+    });
+  });
+
+  // Lazy load team images for better performance
   const images = document.querySelectorAll(".team-img img");
   images.forEach((img) => {
     img.setAttribute("loading", "lazy");
   });
 });
+
 
 
 // Select all FAQ questions
