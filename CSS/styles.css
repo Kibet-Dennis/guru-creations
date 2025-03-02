@@ -1111,7 +1111,7 @@ body {
   transform: scale(0.9);
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
   #back-to-top-btn {
     width: 45px;
@@ -1119,5 +1119,15 @@ body {
     font-size: 18px;
     bottom: 15px;
     right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  #back-to-top-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    bottom: 10px;
+    right: 10px;
   }
 }

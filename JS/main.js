@@ -215,6 +215,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const backToTopBtn = document.getElementById("back-to-top-btn");
 
+  if (!backToTopBtn) return; // Ensure the button exists
+
   // Show/hide button when scrolling
   window.addEventListener("scroll", function () {
     if (window.scrollY > 300) {
@@ -232,6 +234,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+;
 
 
 
