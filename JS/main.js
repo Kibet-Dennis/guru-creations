@@ -8,6 +8,80 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Hero section 
+document.addEventListener("DOMContentLoaded", function () {
+  // Dynamic Text Animation
+  const textElement = document.getElementById("dynamic-text");
+  const textOptions = [
+    "Elevate Your Brand with Digital Excellence",
+    "Innovative Solutions for a Digital World",
+    "Your Success, Our Passion",
+    "Building the Future of Digital Media"
+  ];
+  let textIndex = 0;
+
+  setInterval(() => {
+    textElement.style.opacity = 0;
+    setTimeout(() => {
+      textElement.innerText = textOptions[textIndex];
+      textElement.style.opacity = 1;
+      textIndex = (textIndex + 1) % textOptions.length;
+    }, 500);
+  }, 4000);
+
+  // Particle Effect
+  const canvas = document.getElementById("particle-canvas");
+  const ctx = canvas.getContext("2d");
+  let particles = [];
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  function Particle(x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = Math.random() * 3 + 1;
+    this.speedX = Math.random() * 2 - 1;
+    this.speedY = Math.random() * 2 - 1;
+    this.alpha = 1;
+  }
+
+  Particle.prototype.update = function () {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    this.alpha -= 0.02;
+  };
+
+  Particle.prototype.draw = function () {
+    ctx.fillStyle = `rgba(255, 255, 255, ${this.alpha})`;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  };
+
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles = particles.filter(p => p.alpha > 0);
+    particles.forEach(particle => {
+      particle.update();
+      particle.draw();
+    });
+    requestAnimationFrame(animateParticles);
+  }
+
+  window.addEventListener("resize", resizeCanvas);
+  canvas.addEventListener("mousemove", function (event) {
+    for (let i = 0; i < 5; i++) {
+      particles.push(new Particle(event.clientX, event.clientY));
+    }
+  });
+
+  resizeCanvas();
+  animateParticles();
+});
+
 // Why choose us  section 
 // Adding Interactive Animations on Scroll
 document.addEventListener("DOMContentLoaded", function () {
@@ -43,8 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Smooth Scroll to Section
-document.querySelector(".services").scrollIntoView({ behavior: "smooth" });
+window.onload = function () {
+  document.documentElement.scrollTop = 0;
+};
+
 // Book with us button 
 document.querySelector(".btn-book").addEventListener("mouseenter", function () {
   this.style.transition = "all 0.3s ease-in-out";
@@ -68,20 +144,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Our team section 
-// Add hover effect with slight zoom animation
-document.querySelectorAll(".team-member").forEach((member) => {
-  member.addEventListener("mouseenter", () => {
-    member.style.transition = "all 0.3s ease-in-out";
-  });
-});
-
-// Lazy load team images for better performance
 document.addEventListener("DOMContentLoaded", function () {
+  // Add slight hover effect on team members
+  document.querySelectorAll(".team-member").forEach((member) => {
+    member.addEventListener("mouseenter", () => {
+      member.style.transition = "all 0.3s ease-in-out";
+    });
+  });
+
+  // Lazy load team images for better performance
   const images = document.querySelectorAll(".team-img img");
   images.forEach((img) => {
     img.setAttribute("loading", "lazy");
   });
 });
+
 
 
 // Select all FAQ questions
@@ -119,6 +196,45 @@ document.querySelector(".footer-logo").addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// Whats up floating button 
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappBtn = document.querySelector(".whatsapp-float");
+
+  // Add bounce effect every 5 seconds
+  setInterval(() => {
+    whatsappBtn.classList.add("bounce");
+
+    setTimeout(() => {
+      whatsappBtn.classList.remove("bounce");
+    }, 1500);
+  }, 5000);
+});
+
+
+// Back to top button 
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTopBtn = document.getElementById("back-to-top-btn");
+
+  if (!backToTopBtn) return; // Ensure the button exists
+
+  // Show/hide button when scrolling
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  // Smooth scroll to top
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+;
 
 
 
