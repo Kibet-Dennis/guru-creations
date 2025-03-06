@@ -486,6 +486,194 @@ body {
   }
 }
 
+/* Pricing Section */
+.pricing {
+  background: linear-gradient(135deg, #1e1e2e, #121212);
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #ff7b00, #ff2e63);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.pricing .section-subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 0.8;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Pricing Boxes */
+.pricing-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect */
+.pricing-box:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 123, 0, 0.7), 0 0 40px rgba(255, 123, 0, 0.5);
+}
+
+/* Pricing Title */
+.pricing-box h3 {
+  font-size: 1.8rem;
+  color: #ff7b00;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* Pricing Amount */
+.pricing-box p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Features List */
+.pricing-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-box ul li {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-box ul li:before {
+  content: "✔ ";
+  color: #ff7b00;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* Featured Plan */
+.featured {
+  background: rgba(255, 123, 0, 0.15);
+  border: 2px solid #ff7b00;
+  box-shadow: 0 0 20px rgba(255, 123, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.featured:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 123, 0, 1);
+}
+
+/* Buttons */
+.pricing-box a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 8px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #ff7b00, #ff2e63);
+  box-shadow: 0px 5px 15px rgba(255, 123, 0, 0.4);
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(255, 46, 99, 0.5);
+}
+
+/* Toggle Switch */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.toggle-container span {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0 10px;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.toggle-switch label::after {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background: #ff7b00;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.toggle-switch input:checked + label {
+  background: rgba(255, 123, 0, 0.3);
+}
+
+.toggle-switch input:checked + label::after {
+  left: 32px;
+}
+
 /* Blog Section Styling */
 .blog {
   padding: 80px 0;

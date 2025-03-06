@@ -127,6 +127,34 @@ document.querySelector(".btn-book").addEventListener("mouseenter", function () {
 });
 
 
+
+// Pricing section 
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleSwitch = document.getElementById("pricing-toggle");
+  const priceValues = {
+    starter: { monthly: "$199", yearly: "$1799" },
+    pro: { monthly: "$499", yearly: "$4499" },
+    enterprise: { monthly: "Custom Pricing", yearly: "Custom Pricing" }
+  };
+
+  toggleSwitch.addEventListener("change", function () {
+    const isYearly = toggleSwitch.checked;
+    document.getElementById("starter-price").innerHTML = isYearly
+      ? `<strong>${priceValues.starter.yearly}</strong> / year`
+      : `<strong>${priceValues.starter.monthly}</strong> / month`;
+
+    document.getElementById("pro-price").innerHTML = isYearly
+      ? `<strong>${priceValues.pro.yearly}</strong> / year`
+      : `<strong>${priceValues.pro.monthly}</strong> / month`;
+
+    document.getElementById("enterprise-price").innerHTML = isYearly
+      ? `<strong>${priceValues.enterprise.yearly}</strong>`
+      : `<strong>${priceValues.enterprise.monthly}</strong>`;
+  });
+});
+
+
+
 // blog section 
 // Add hover effect with slight zoom animation
 document.querySelectorAll(".blog-post").forEach((post) => {
