@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
 // Hero section 
 document.addEventListener("DOMContentLoaded", function () {
   // Dynamic Text Animation
@@ -81,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
   resizeCanvas();
   animateParticles();
 });
+
 
 // Why choose us  section 
 // Adding Interactive Animations on Scroll
