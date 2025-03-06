@@ -586,6 +586,79 @@
       </div>
     </section>
 
+<!-- Our Portfolio Section -->
+<section class="portfolio-section py-5 text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="fw-bold text-gradient" data-aos="fade-up" data-aos-duration="1000">
+          Our Portfolio
+        </h2>
+        <p class="lead text-body-secondary" data-aos="fade-up" data-aos-duration="1500">
+          Explore our latest projects and creative campaigns across various industries.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Grid -->
+<section class="portfolio-grid-section bg-dark py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      
+      <!-- Portfolio Item 1 -->
+      <div class="col">
+        <div class="card shadow-sm" data-aos="zoom-in" data-aos-duration="2000">
+          <img src="Assets/Portfolio1.webp" class="card-img-top" alt="Brand Launch Campaign" onclick="openLightbox('Assets/Portfolio1.webp', 'Brand Launch Campaign - XYZ Corporation')">
+          <div class="card-body">
+            <h5 class="card-title">Brand Launch Campaign</h5>
+            <p class="card-text">Client: XYZ Corporation</p>
+            <a href="portfolio.html" class="btn btn-primary btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 2 -->
+      <div class="col">
+        <div class="card shadow-sm" data-aos="zoom-in" data-aos-duration="2200">
+          <img src="Assets/Portfolio2.webp" class="card-img-top" alt="Product Photography" onclick="openLightbox('Assets/Portfolio2.webp', 'Product Photography - ABC Cosmetics')">
+          <div class="card-body">
+            <h5 class="card-title">Product Photography</h5>
+            <p class="card-text">Client: ABC Cosmetics</p>
+            <a href="portfolio.html" class="btn btn-primary btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 3 -->
+      <div class="col">
+        <div class="card shadow-sm" data-aos="zoom-in" data-aos-duration="2400">
+          <img src="Assets/Portfolio3.webp" class="card-img-top" alt="Website Redesign" onclick="openLightbox('Assets/Portfolio3.webp', 'Website Redesign - 123 Solutions')">
+          <div class="card-body">
+            <h5 class="card-title">Website Redesign</h5>
+            <p class="card-text">Client: 123 Solutions</p>
+            <a href="portfolio.html" class="btn btn-primary btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add More Portfolio Items as Needed -->
+
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox for Full-Screen Image Preview -->
+<div id="lightbox" class="lightbox">
+  <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" />
+  <p id="lightbox-caption"></p>
+</div>
+
+          
+
+
     
     <!-- Blog section  -->
     <section class="blog">

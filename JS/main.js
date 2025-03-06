@@ -198,6 +198,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Our portfolio section 
+// Lightbox Feature
+function openLightbox(imageSrc, caption) {
+  document.getElementById("lightbox-img").src = imageSrc;
+  document.getElementById("lightbox-caption").textContent = caption;
+  document.getElementById("lightbox").classList.add("show");
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").classList.remove("show");
+}
 
 
 // blog section 
