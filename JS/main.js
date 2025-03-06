@@ -101,6 +101,29 @@ document.addEventListener("DOMContentLoaded", function () {
 // Smooth Scroll to Section
 document.querySelector(".why-choose-us").scrollIntoView({ behavior: "smooth" });
 
+// About us section 
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutSection = document.querySelector(".about-text");
+  const features = document.querySelectorAll(".features-list li");
+
+  function fadeInElements() {
+    if (aboutSection.getBoundingClientRect().top < window.innerHeight - 100) {
+      aboutSection.style.opacity = "1";
+      aboutSection.style.transform = "translateY(0)";
+    }
+
+    features.forEach((feature, index) => {
+      setTimeout(() => {
+        feature.style.opacity = "1";
+        feature.style.transform = "translateX(0)";
+      }, index * 200);
+    });
+  }
+
+  window.addEventListener("scroll", fadeInElements);
+  fadeInElements();
+});
+
 
 
 
