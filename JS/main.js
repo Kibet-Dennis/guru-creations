@@ -151,6 +151,24 @@ document.querySelector(".btn-book").addEventListener("mouseenter", function () {
   this.style.transition = "all 0.3s ease-in-out";
 });
 
+// Our process 
+document.addEventListener("DOMContentLoaded", function () {
+  const steps = document.querySelectorAll(".process-box");
+
+  function fadeInSteps() {
+    steps.forEach((step, index) => {
+      if (step.getBoundingClientRect().top < window.innerHeight - 100) {
+        step.style.opacity = "1";
+        step.style.transform = "translateY(0)";
+      }
+    });
+  }
+
+  window.addEventListener("scroll", fadeInSteps);
+  fadeInSteps();
+});
+
+
 
 
 // Pricing section 
@@ -178,6 +196,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+// Our portfolio section 
 
 
 // blog section 
