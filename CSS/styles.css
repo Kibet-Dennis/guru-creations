@@ -800,6 +800,7 @@ body {
   backdrop-filter: blur(10px);
   color: #fff;
   overflow: hidden;
+  text-decoration: wavy;
 }
 
 /* Fade-In Effect */
