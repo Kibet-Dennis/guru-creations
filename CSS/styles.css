@@ -798,7 +798,7 @@ body {
   background: url("/Assets/back\ ground\ image.jpg")
     no-repeat center center/cover;
   backdrop-filter: blur(10px);
-  color: #fff;
+  color: #333;
   overflow: hidden;
   text-decoration: wavy;
 }
