@@ -1463,6 +1463,27 @@ body {
   }
 }
 
+
+/* CTA before footer */
+.cta-banner {
+  background: linear-gradient(135deg, #ff7b00, #ff2e63);
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.cta-banner h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.cta-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+
 /* Footer Section */
 .footer {
   background: #16213e;
