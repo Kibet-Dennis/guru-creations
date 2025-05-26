@@ -197,6 +197,41 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Requesting for consultation form 
+document.getElementById('fcs-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  let valid = true;
+
+  const name = document.getElementById("fcs-name");
+  const email = document.getElementById("fcs-email");
+  const message = document.getElementById("fcs-message");
+
+  document.getElementById("fcs-name-error").textContent = "";
+  document.getElementById("fcs-email-error").textContent = "";
+  document.getElementById("fcs-message-error").textContent = "";
+
+  if (name.value.trim() === "") {
+    document.getElementById("fcs-name-error").textContent = "Full name is required.";
+    valid = false;
+  }
+
+  if (email.value.trim() === "" || !email.value.includes("@")) {
+    document.getElementById("fcs-email-error").textContent = "Valid email is required.";
+    valid = false;
+  }
+
+  if (message.value.trim().length < 10) {
+    document.getElementById("fcs-message-error").textContent = "Please describe your project.";
+    valid = false;
+  }
+
+  if (valid) {
+    alert("Thank you! Your request has been submitted.");
+    this.reset();
+  }
+});
+
 // Our portfolio section 
 // Lightbox Feature
 function openLightbox(imageSrc, caption) {
