@@ -8,6 +8,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Navbar 
+// Optional scroll shadow effect
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.custom-navbar');
+  if (window.scrollY > 30) {
+    navbar.style.background = 'rgba(0, 0, 0, 0.75)';
+    navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+  } else {
+    navbar.style.background = 'rgba(255, 255, 255, 0.1)';
+    navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
+  }
+});
+
 
 // Hero section 
 document.addEventListener("DOMContentLoaded", function () {
