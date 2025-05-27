@@ -93,59 +93,38 @@
   </head>
 
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img
-            src="Assets/logo 1.png"
-            alt="Guru Creations Media"
-            width="30"
-            height="30"
-            class="d-inline-block align-text-top"
-          />
-          Guru Creations
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ourteam.html">Our Team </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+   <!-- Transparent Futuristic Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="Assets/logo 1.png" alt="Guru Creations Media" width="35" height="35" class="me-2" />
+      <span class="brand-name">Guru Creations</span>
+    </a>
+    <button
+      class="navbar-toggler text-white border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#customNavbarNav"
+      aria-controls="customNavbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="customNavbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="ourteam.html">Our Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
     <!-- Hero Section -->
     <section class="hero">
@@ -593,33 +572,34 @@
       </div>
     </section>
 
-  <!-- Get a Free Consultation Section -->
-<section class="consultation">
-  <div class="container">
-    <h2 class="fade-in" data-aos="fade-up" data-aos-duration="1000">Get a Free Consultation</h2>
-    <p class="section-subtitle fade-in" data-aos="fade-up" data-aos-duration="1500">
+ <!-- Get a Free Consultation Section -->
+<section class="fcs-section" id="free-consultation">
+  <div class="fcs-container">
+    <h2 class="fcs-title" data-aos="fade-up" data-aos-duration="1000">Get a Free Consultation</h2>
+    <p class="fcs-subtitle" data-aos="fade-up" data-aos-duration="1500">
       Let’s discuss how we can elevate your brand’s digital presence.
     </p>
-    <form class="consultation-form fade-in" data-aos="zoom-in" data-aos-duration="2000" id="consultation-form">
-      <div class="input-group">
-        <input type="text" id="name" placeholder="Full Name" required>
-        <span class="error-message" id="name-error"></span>
+    <form class="fcs-form" id="fcs-form" data-aos="zoom-in" data-aos-duration="2000">
+      <div class="fcs-input-group">
+        <input type="text" id="fcs-name" placeholder="Full Name" required />
+        <span class="fcs-error" id="fcs-name-error"></span>
       </div>
-      <div class="input-group">
-        <input type="email" id="email" placeholder="Email Address" required>
-        <span class="error-message" id="email-error"></span>
+      <div class="fcs-input-group">
+        <input type="email" id="fcs-email" placeholder="Email Address" required />
+        <span class="fcs-error" id="fcs-email-error"></span>
       </div>
-      <div class="input-group">
-        <input type="text" id="company" placeholder="Company Name">
+      <div class="fcs-input-group">
+        <input type="text" id="fcs-company" placeholder="Company Name" />
       </div>
-      <div class="input-group">
-        <textarea id="message" placeholder="Tell us about your project"></textarea>
-        <span class="error-message" id="message-error"></span>
+      <div class="fcs-input-group">
+        <textarea id="fcs-message" placeholder="Tell us about your project"></textarea>
+        <span class="fcs-error" id="fcs-message-error"></span>
       </div>
-      <button type="submit" class="btn btn-primary glow-on-hover">Request for Consultation</button>
+      <button type="submit" class="fcs-btn">Request for Consultation</button>
     </form>
   </div>
 </section>
+
 
     
 <!-- Our Portfolio Section -->
@@ -984,6 +964,15 @@
         </div>
       </div>
     </section>
+
+    <section class="cta-banner">
+      <div class="container text-center" data-aos="zoom-in">
+        <h2>Ready to Transform Your Brand?</h2>
+        <p>Let’s create something extraordinary together. Book a free consultation today!</p>
+        <a href="#free-consultation" class="btn btn-primary">Get Started</a>
+      </div>
+    </section>
+    
 
   
 
