@@ -10,6 +10,73 @@ body {
   color: #f7de06;
 }
 
+/* Glassmorphism Transparent Navbar */
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.8rem 0;
+  transition: background 0.4s ease;
+  z-index: 999;
+}
+
+.custom-navbar .navbar-brand .brand-name {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  margin-left: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.custom-navbar .navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #0dcaf0;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+  color: #0dcaf0;
+}
+
+.navbar-toggler {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Responsive Brand Alignment */
+@media (max-width: 991px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+  .custom-navbar .navbar-nav .nav-link {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+
 /* Hero Section */
 .hero {
   position: relative;
