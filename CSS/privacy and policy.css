@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f0f27;
+  color: #e0e0e0;
+  scroll-behavior: smooth;
+  padding-top: 80px;
+}
+
+.custom-navbar {
+  background: rgba(15, 15, 40, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.brand-name { font-size: 1.25rem; }
+
+.hero-section {
+  background: linear-gradient(135deg, #11052c, #19203e);
+  padding: 100px 0;
+  color: #00ffe1;
+}
+
+.hero-section h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+.hero-section .lead { font-size: 1.25rem; color: #ccc; }
+
+.faq-section { padding: 80px 0; }
+.faq-section .intro { text-align: center; margin-bottom: 40px; color: #bbb; }
+
+.accordion-button {
+  background: #1e1e3a;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.accordion-button:not(.collapsed) {
+  background: #27274f;
+}
+
+.accordion-body {
+  background: #232342;
+  color: #e0e0e0;
+  border-radius: 0 0 8px 8px;
+}
+
+.footer {
+  background: #0d0d21;
+  padding: 40px 0;
+}
+.footer a { color: #00ffe1; }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px; right: 30px;
+  background: #25d366;
+  color: #fff; padding: 18px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+  transition: 0.3s;
+}
