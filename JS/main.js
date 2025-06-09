@@ -245,7 +245,122 @@ document.getElementById('fcs-form').addEventListener('submit', function (e) {
   }
 });
 
-// Our portfolio section 
+// Our portfolio section
+// JavaScript for Portfolio Functionality
+
+document.addEventListener('DOMContentLoaded', function () {
+  // 1. Section Introduction Animation (Fade-up/Slide-in)
+  const portfolioIntro = document.getElementById('portfolio-intro');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target); // Stop observing once animated
+      }
+    });
+  }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+  if (portfolioIntro) {
+    observer.observe(portfolioIntro);
+  }
+
+  // 2. Project Filtering
+  const filterButtons = document.querySelectorAll('.filter-buttons .btn');
+  const projectItems = document.querySelectorAll('.project-item');
+  const projectGrid = document.getElementById('project-grid');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      // Remove 'active' class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      // Add 'active' class to the clicked button
+      this.classList.add('active');
+
+      const filterValue = this.getAttribute('data-filter');
+
+      // Apply filtering with a slight delay for animation
+      projectItems.forEach(item => {
+        // Hide all items initially for a cleaner re-arrangement
+        item.style.opacity = '0';
+        item.style.transform = 'scale(0.9)';
+        item.style.display = 'none'; // Hide to prevent layout issues during animation
+      });
+
+      setTimeout(() => { // Small delay to allow opacity/transform to start
+        projectItems.forEach(item => {
+          if (filterValue === 'all' || item.classList.contains(filterValue)) {
+            item.style.display = 'block'; // Make visible first
+            setTimeout(() => { // Then fade/scale in
+              item.style.opacity = '1';
+              item.style.transform = 'scale(1)';
+            }, 50); // Slight delay for individual items
+          }
+        });
+      }, 300); // Wait for all items to start hiding
+    });
+  });
+
+  // 3. Lightbox (Bootstrap Modal) Functionality
+  const projectModal = document.getElementById('projectModal');
+  projectModal.addEventListener('show.bs.modal', event => {
+    // Button that triggered the modal
+    const button = event.relatedTarget;
+    // Extract info from data-* attributes
+    const title = button.getAttribute('data-title');
+    const category = button.getAttribute('data-category');
+    const image = button.getAttribute('data-image');
+    const description = button.getAttribute('data-description');
+
+    // Update the modal's content.
+    const modalProjectTitle = projectModal.querySelector('#modalProjectTitle');
+    const modalProjectCategory = projectModal.querySelector('#modalProjectCategory');
+    const modalProjectImage = projectModal.querySelector('#modalProjectImage');
+    const modalProjectDescription = projectModal.querySelector('#modalProjectDescription');
+
+    modalProjectTitle.textContent = title;
+    modalProjectCategory.textContent = category;
+    modalProjectImage.src = image;
+    modalProjectImage.alt = title;
+    modalProjectDescription.textContent = description;
+  });
+
+  // 4. Stats Counter Animation
+  const statsSection = document.querySelector('.stats-counter');
+  const statItems = document.querySelectorAll('.stats-counter .number');
+  let statsAnimated = false; // Flag to ensure animation runs only once
+
+  const startCounter = (entry) => {
+    if (entry.isIntersecting && !statsAnimated) {
+      statItems.forEach(item => {
+        const target = parseInt(item.getAttribute('data-target'));
+        let current = 0;
+        const duration = 2000; // 2 seconds
+        const increment = target / (duration / 10); // Calculate increment per 10ms
+
+        const counter = setInterval(() => {
+          current += increment;
+          if (current < target) {
+            item.textContent = Math.ceil(current);
+          } else {
+            item.textContent = target;
+            clearInterval(counter);
+          }
+        }, 10);
+      });
+      statsAnimated = true; // Set flag to true
+    }
+  };
+
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(startCounter);
+  }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+
+  if (statsSection) {
+    statsObserver.observe(statsSection);
+  }
+});
+
+
 // Lightbox Feature
 function openLightbox(imageSrc, caption) {
   document.getElementById("lightbox-img").src = imageSrc;

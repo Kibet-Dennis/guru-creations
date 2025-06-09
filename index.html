@@ -606,68 +606,307 @@
 
 
     
-<!-- Our Portfolio Section -->
-<section class="portfolio-section py-5 text-center">
+ <!-- our portfolio section  -->
+  <!-- Main Content Container -->
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <h2 class="fw-bold text-gradient" data-aos="fade-up" data-aos-duration="1000">
-          Our Portfolio
-        </h2>
-        <p class="lead text-body-secondary" data-aos="fade-up" data-aos-duration="1500">
-          Explore our latest projects and creative campaigns across various industries.
-        </p>
-      </div>
+
+    <!-- 1. Section Introduction -->
+    <section class="section-intro" id="portfolio-intro" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="gradient-text">Work That Speaks</h1>
+        <p class="lead">A glimpse into the digital solutions, creative branding, and innovations we've crafted for businesses worldwide.</p>
+    </section>
+
+    <!-- Optional: Carousel Slider for featured projects -->
+    <section class="optional-section text-center" style="margin-top: 30px;" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="mb-5 gradient-text">Featured Projects</h2>
+        <div id="featuredProjectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Featured Project 1: Livestream -->
+              <div class="carousel-item active">
+                <img src="./Assets/Featured products/Livestream.jpg" class="d-block w-100 rounded-lg" alt="Featured Livestream Project">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white">Interactive Live Event Production</h5>
+                  <p>Seamless livestreaming solutions for large-scale virtual events.</p>
+                </div>
+              </div>
+              <!-- Featured Project 2: Photography -->
+              <div class="carousel-item">
+                <img src="" class="d-block w-100 rounded-lg" alt="Featured Photography Project">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white">Commercial Product Photography</h5>
+                  <p>High-fidelity visuals for e-commerce and marketing campaigns.</p>
+                </div>
+              </div>
+              <!-- Featured Project 3: Videography -->
+              <div class="carousel-item">
+                <img src="./Assets/Featured products/Videography..jpg" class="d-block w-100 rounded-lg" alt="Featured Videography Project">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white">Brand Storytelling Videography</h5>
+                  <p>Cinematic narratives capturing the essence of your brand.</p>
+                </div>
+              </div>
+              <!-- Featured Project 4: Graphic Design -->
+              <div class="carousel-item">
+                <img src="./Assets/Featured products/graphic design.jpg" class="d-block w-100 rounded-lg" alt="Featured Graphic Design Project">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white">Creative Infographic Design</h5>
+                  <p>Transforming complex data into compelling visual stories.</p>
+                </div>
+              </div>
+              <!-- Featured Project 5: Branding -->
+              <div class="carousel-item">
+                <img src="./Assets/Featured products/branding.jpg" class="d-block w-100 rounded-lg" alt="Featured Branding Project">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white">Comprehensive Corporate Rebranding</h5>
+                  <p>Unified visual identity for a global technology firm.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#featuredProjectCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#featuredProjectCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <!-- 3. Filters -->
+    <section class="filter-buttons" data-aos="fade-up" data-aos-delay="300">
+        <button type="button" class="btn active" data-filter="all">All</button>
+        <button type="button" class="btn" data-filter="web-design">Web Design</button>
+        <button type="button" class="btn" data-filter="branding">Branding</button>
+        <button type="button" class="btn" data-filter="livestream">Livestream</button>
+        <button type="button" class="btn" data-filter="photography">Photography</button>
+        <button type="button" class="btn" data-filter="videography">Videography</button>
+        <button type="button" class="btn" data-filter="graphic-design">Graphic Design</button>
+        <button type="button" class="btn" data-filter="digital-marketing">Digital Marketing</button>
+    </section>
+
+    <!-- 2. Project Showcase Grid -->
+    <section class="project-showcase">
+        <div class="row" id="project-grid">
+            <!-- Project Card 1: Web Design -->
+            <div class="col-12 col-md-6 col-lg-4 project-item web-design" data-aos="zoom-in" data-aos-delay="100">
+                <div class="project-card">
+                    <img src="https://placehold.co/700x500/1a1a2e/ffffff?text=Luxury+Real+Estate" alt="Luxury Real Estate Website">
+                    <div class="card-body">
+                        <span class="category-tag">Web Design</span>
+                        <h5 class="card-title">Luxury Real Estate Website</h5>
+                        <p class="card-text">Responsive web design for premium housing firm.</p>
+                        <button type="button" class="btn btn-view-case-study" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Luxury Real Estate Website"
+                            data-category="Web Design"
+                            data-image="https://placehold.co/800x600/1a1a2e/ffffff?text=Luxury+Real+Estate+Full"
+                            data-description="Developed a high-end, responsive website for a luxury real estate company, focusing on stunning visuals, intuitive navigation, and seamless mobile experience to showcase exclusive properties. Features include virtual tours, interactive maps, and a client portal.">
+                            View Case Study
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2: Branding -->
+            <div class="col-12 col-md-6 col-lg-4 project-item branding" data-aos="zoom-in" data-aos-delay="200">
+                <div class="project-card">
+                    <img src="./Assets/Featured products/branding.jpg" alt="Artisan Coffee Shop Branding">
+                    <div class="card-body">
+                        <span class="category-tag">Branding</span>
+                        <h5 class="card-title">Artisan Coffee Shop Branding</h5>
+                        <p class="card-text">Full brand identity creation for a new urban cafe.</p>
+                        <button type="button" class="btn btn-view-case-study" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Artisan Coffee Shop Branding"
+                            data-category="Branding"
+                            data-image="https://placehold.co/800x600/1a1a2e/ffffff?text=Coffee+Shop+Full"
+                            data-description="Crafted a unique and inviting brand identity for 'The Daily Grind' coffee shop, including logo design, color palette, typography, packaging, and in-store signage, reflecting its commitment to quality and community.">
+                            View Case Study
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 3: Livestream -->
+            <div class="col-12 col-md-6 col-lg-4 project-item livestream" data-aos="zoom-in" data-aos-delay="300">
+                <div class="project-card">
+                    <img src="./Assets/Livestream camera pic.webp" alt="Virtual Concert Livestream">
+                    <div class="card-body">
+                        <span class="category-tag">Livestream</span>
+                        <h5 class="card-title">Virtual Concert Livestream</h5>
+                        <p class="card-text">High-definition live streaming for a global music event.</p>
+                        <button type="button" class="btn btn-view-case-study" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Virtual Concert Livestream"
+                            data-category="Livestream"
+                            data-image="https://placehold.co/800x600/1a1a2e/ffffff?text=Concert+Full"
+                            data-description="Provided comprehensive livestreaming services for a major virtual concert, ensuring crystal-clear audio and video, multi-camera angles, and interactive audience features, reaching millions worldwide.">
+                            View Case Study
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 4: Photography -->
+            <div class="col-12 col-md-6 col-lg-4 project-item photography" data-aos="zoom-in" data-aos-delay="100">
+                <div class="project-card">
+                    <img src="https://placehold.co/700x500/1a1a2e/ffffff?text=Corporate+Headshots" alt="Corporate Headshots Photography">
+                    <div class="card-body">
+                        <span class="category-tag">Photography</span>
+                        <h5 class="card-title">Corporate Headshots Campaign</h5>
+                        <p class="card-text">Professional photography for a tech firm's team.</p>
+                        <button type="button" class="btn btn-view-case-study" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Corporate Headshots Campaign"
+                            data-category="Photography"
+                            data-image="https://placehold.co/800x600/1a1a2e/ffffff?text=Headshots+Full"
+                            data-description="Captured modern and engaging professional headshots for the entire leadership team of 'InnovateCo', enhancing their online presence and brand professionalism.">
+                            View Case Study
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 5: Videography -->
+            <div class="col-12 col-md-6 col-lg-4 project-item videography" data-aos="zoom-in" data-aos-delay="200">
+                <div class="project-card">
+                    <img src="https://placehold.co/700x500/1a1a2e/ffffff?text=Documentary+Short" alt="Environmental Documentary Short">
+                    <div class="card-body">
+                        <span class="category-tag">Videography</span>
+                        <h5 class="card-title">Environmental Documentary Short</h5>
+                        <p class="card-text">Captivating short film on sustainable practices.</p>
+                        <button type="button" class="btn btn-view-case-study" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Environmental Documentary Short"
+                            data-category="Videography"
+                            data-image="https://placehold.co/800x600/1a1a2e/ffffff?text=Documentary+Full"
+                            data-description="Produced a visually stunning and impactful short documentary highlighting the importance of environmental conservation for a non-profit organization, used for awareness campaigns and film festivals.">
+                            View Case Study
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 6: Graphic Design -->
+            <div class="col-12 col-md-6 col-lg-4 project-item graphic-design" data-aos="zoom-in" data-aos-delay="300">
+                <div class="project-card">
+                    <img src="https://placehold.co/700x500/1a1a2e/ffffff?text=Event+Poster+Design" alt="Music Festival Poster Design">
+                    <div class="card-body">
+                        <span class="category-tag">Graphic Design</span>
+                        <h5 class="card-title">Music Festival Poster Design</h5>
+                        <p class="card-text">Vibrant visual identity for an annual music event.</p>
+                        <button type="button" class="btn btn-view-case-study" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Music Festival Poster Design"
+                            data-category="Graphic Design"
+                            data-image="https://placehold.co/800x600/1a1a2e/ffffff?text=Poster+Full"
+                            data-description="Designed a series of eye-catching posters and promotional materials for 'Rhythm Fest', integrating dynamic typography and abstract elements to capture the energy of the event.">
+                            View Case Study
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 7: Digital Marketing -->
+            <div class="col-12 col-md-6 col-lg-4 project-item digital-marketing" data-aos="zoom-in" data-aos-delay="100">
+                <div class="project-card">
+                    <img src="https://placehold.co/700x500/1a1a2e/ffffff?text=Retail+Social+Media" alt="Retail Social Media Strategy">
+                    <div class="card-body">
+                        <span class="category-tag">Digital Marketing</span>
+                        <h5 class="card-title">Retail Social Media Strategy</h5>
+                        <p class="card-text">Engaging content and ad campaigns for a fashion brand.</p>
+                        <button type="button" class="btn btn-view-case-study" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Retail Social Media Strategy"
+                            data-category="Digital Marketing"
+                            data-image="https://placehold.co/800x600/1a1a2e/ffffff?text=Social+Media+Full"
+                            data-description="Developed and executed a comprehensive social media marketing strategy for 'TrendWear', boosting engagement by 60% and driving direct sales through targeted ad campaigns and influencer collaborations.">
+                            View Case Study
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Project Card 8: Web Design - E-commerce -->
+             <div class="col-12 col-md-6 col-lg-4 project-item web-design" data-aos="zoom-in" data-aos-delay="200">
+                <div class="project-card">
+                    <img src="https://placehold.co/700x500/1a1a2e/ffffff?text=Online+Store+Dev" alt="E-commerce Store Development">
+                    <div class="card-body">
+                        <span class="category-tag">Web Design</span>
+                        <h5 class="card-title">Bespoke E-commerce Store</h5>
+                        <p class="card-text">Custom online shop development for a niche boutique.</p>
+                        <button type="button" class="btn btn-view-case-study" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Bespoke E-commerce Store"
+                            data-category="Web Design"
+                            data-image="https://placehold.co/800x600/1a1a2e/ffffff?text=E-commerce+Full"
+                            data-description="Designed and developed a fully responsive e-commerce platform for 'Artisan Crafts', integrating secure payment gateways, inventory management, and a seamless user shopping experience.">
+                            View Case Study
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Optional: Stats Counter -->
+    <section class="optional-section stats-counter text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+        <h2 class="mb-5 gradient-text">Our Achievements</h2>
+        <div class="row">
+            <div class="col-6 col-md-3 stat-item">
+                <div class="number" data-target="20">0</div>
+                <div class="label">Projects Completed</div>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <div class="number" data-target="15">0</div>
+                <div class="label">Satisfied Clients</div>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <div class="number" data-target="3">0</div>
+                <div class="label">Years in Business</div>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <div class="number" data-target="99">0</div>
+                <div class="label">% Client Retention</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional: Client Logos Grid -->
+    <section class="optional-section client-logos text-center mt-5" data-aos="fade-up" data-aos-delay="500">
+        <h2 class="mb-5 gradient-text">Trusted By</h2>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-4 col-md-2 mb-4" data-aos="zoom-in" data-aos-delay="100"><img src="https://placehold.co/150x80/000/ffffff?text=Client+A" alt="Client Logo A"></div>
+            <div class="col-4 col-md-2 mb-4" data-aos="zoom-in" data-aos-delay="200"><img src="https://placehold.co/150x80/000/ffffff?text=Client+B" alt="Client Logo B"></div>
+            <div class="col-4 col-md-2 mb-4" data-aos="zoom-in" data-aos-delay="300"><img src="https://placehold.co/150x80/000/ffffff?text=Client+C" alt="Client Logo C"></div>
+            <div class="col-4 col-md-2 mb-4" data-aos="zoom-in" data-aos-delay="400"><img src="https://placehold.co/150x80/000/ffffff?text=Client+D" alt="Client Logo D"></div>
+            <div class="col-4 col-md-2 mb-4" data-aos="zoom-in" data-aos-delay="500"><img src="https://placehold.co/150x80/000/ffffff?text=Client+E" alt="Client Logo E"></div>
+            <div class="col-4 col-md-2 mb-4" data-aos="zoom-in" data-aos-delay="600"><img src="https://placehold.co/150x80/000/ffffff?text=Client+F" alt="Client Logo F"></div>
+        </div>
+    </section>
+
+    <!-- 8. CTA (Call-to-Action) After Portfolio -->
+    <section class="cta-section" data-aos="fade-up" data-aos-delay="600">
+        <h2>Inspired by our work? Let’s build something amazing together.</h2>
+        <a href="#" class="btn btn-contact">Book A Consultation</a>
+    </section>
+
+</div> <!-- End of .container -->
+
+<!-- Bootstrap Modal for Project Lightbox -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modalProjectImage" src="" alt="Project Image" class="img-fluid mb-3">
+                <p class="text-muted"><small>Category: <span id="modalProjectCategory"></span></small></p>
+                <h4 id="modalProjectTitle"></h4>
+                <p id="modalProjectDescription"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-close-modal" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
-
-<!-- Portfolio Grid extension -->
-<section class="portfolio-grid-section bg-dark py-5">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-      
-      <!-- Portfolio Item 1 -->
-      <div class="col">
-        <div class="card shadow-sm" data-aos="zoom-in" data-aos-duration="2000">
-          <img src="Assets/Portfolio1.webp" class="card-img-top" alt="Brand Launch Campaign" onclick="openLightbox('Assets/Portfolio1.webp', 'Brand Launch Campaign - XYZ Corporation')">
-          <div class="card-body">
-            <h5 class="card-title">Brand Launch Campaign</h5>
-            <p class="card-text">Client: summary Creatives </p>
-            <a href="portfolio.html" class="btn btn-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Portfolio Item 2 -->
-      <div class="col">
-        <div class="card shadow-sm" data-aos="zoom-in" data-aos-duration="2200">
-          <img src="Assets/Portfolio2.webp" class="card-img-top" alt="Product Photography" onclick="openLightbox('Assets/Portfolio2.webp', 'Product Photography - ABC Cosmetics')">
-          <div class="card-body">
-            <h5 class="card-title">Product Photography</h5>
-            <p class="card-text">Client: ABC Cosmetics</p>
-            <a href="portfolio.html" class="btn btn-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Portfolio Item 3 -->
-      <div class="col">
-        <div class="card shadow-sm" data-aos="zoom-in" data-aos-duration="2400">
-          <img src="Assets/Portfolio3.webp" class="card-img-top" alt="Website Redesign" onclick="openLightbox('Assets/Portfolio3.webp', 'Website Redesign - 123 Solutions')">
-          <div class="card-body">
-            <h5 class="card-title">Website Redesign</h5>
-            <p class="card-text">Client: 123 Solutions</p>
-            <a href="portfolio.html" class="btn btn-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Add More Portfolio Items as Needed -->
-
-    </div>
-  </div>
-</section>
+</div>
 
 <!-- Lightbox for Full-Screen Image Preview -->
 <div id="lightbox" class="lightbox">
