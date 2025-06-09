@@ -3,86 +3,261 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🔐 Guru Creations Privacy Policy</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="privacy-policy.css" />
+  <title>Privacy Policy | Guru Creations Media</title>
+
+  <!-- Meta & SEO -->
+  <meta name="description" content="Understand how Guru Creations Media collects, uses, and protects your personal data." />
+  <link rel="icon" href="Assets/icon_log-remove back ground.png" />
+
+  <!-- Bootstrap + Fonts + Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="./CSS/styles.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="Assets/icon_log-remove back ground.png" width="35" height="35" alt="Guru Creations" />
-        <span class="brand-name">🔐 Guru Creations Privacy Policy</span>
-      </a>
-      <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon text-white"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link text-white" href="index.html">Back</a></li>
-        </ul>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="Assets/icon_log-remove back ground.png" width="35" height="35" class="me-2" />
+      <span class="brand-name">Guru Creations</span>
+    </a>
+    <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#customNavbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="customNavbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" style="height: 60vh;">
+  <video autoplay muted loop id="hero-video">
+    <source src="Assets/hero 2.0.mp4" type="video/mp4" />
+  </video>
+  <canvas id="particle-canvas"></canvas>
+  <div class="container text-center hero-text" data-aos="fade-up">
+    <h1 class="display-4">Privacy & Policy</h1>
+    <p class="lead">Your data. Our responsibility. Learn how we protect your information.</p>
+    <p class="text-white-50">Last Updated: <span id="lastUpdatedDate"></span></p>
+  </div>
+</section>
+
+<!-- Privacy Policy Content -->
+<section class="privacy-policy py-5">
+  <div class="container">
+    <div class="accordion" id="policyAccordion">
+      <!-- Section 1 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            1. Introduction and Scope of this Policy
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#policyAccordion">
+          <div class="accordion-body">
+            <p>This policy applies to all users of Guru Creations Media's website and services. By accessing our services, you agree to this policy.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </nav>
 
-  <header class="hero-section">
-    <div class="container text-center">
-      <h1>Privacy & Policy</h1>
-      <p class="lead">Your privacy matters. This policy outlines how we collect, use, and protect your data.</p>
-    </div>
-  </header>
+      <!-- Section 2 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            2. Information We Collect and Why
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#policyAccordion">
+          <div class="accordion-body">
+            <h5><i class="fas fa-user-shield text-warning me-2"></i> Personal Information</h5>
+            <ul>
+              <li><i class="fas fa-envelope text-info me-1"></i> Name, Email, Phone — collected via forms.</li>
+              <li><i class="fas fa-file-signature text-info me-1"></i> Messages, inquiries — for communication.</li>
+            </ul>
+            <h5><i class="fas fa-globe text-warning me-2"></i> Non-Personal / Usage Data</h5>
+            <ul>
+              <li><i class="fas fa-network-wired text-info me-1"></i> IP address, browser type, OS — for analytics.</li>
+              <li><i class="fas fa-cookie text-info me-1"></i> Cookies — to improve functionality.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-  <section class="faq-section">
-    <div class="container">
-      <p class="intro">
-        At Guru Creations (“we,” “our,” “us”), we’re serious about privacy. Operating under Kenya’s Data Protection Act, 2019, we commit to global data standards.
-      </p>
-      <div class="accordion" id="faqAccordion">
-        <!-- Repeat this FAQ block -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingScope">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseScope">
-              Scope of Coverage
-            </button>
-          </h2>
-          <div id="collapseScope" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              Applies to all data collected through:
-              <ul>
-                <li>Our website and web apps</li>
-                <li>Livestreams and social media interactions</li>
-                <li>Client onboarding and proposals</li>
-                <li>Third-party integrations (analytics, payments)</li>
-              </ul>
+      <!-- Section 3 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            3. How We Use Your Information & Legal Basis
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#policyAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li><strong>To respond to inquiries:</strong> <span class="badge bg-secondary">Legitimate Interest</span></li>
+              <li><strong>Marketing emails:</strong> <span class="badge bg-info">Consent</span></li>
+              <li><strong>Analytics & site improvement:</strong> <span class="badge bg-warning text-dark">Legitimate Interest</span></li>
+              <li><strong>Legal requirements:</strong> <span class="badge bg-danger">Legal Obligation</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+            4. Data Sharing, Security, and Retention
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#policyAccordion">
+          <div class="accordion-body">
+            <p>We never sell your data. We share with:</p>
+            <ul>
+              <li>Service providers (e.g., hosting, payment processing)</li>
+              <li>Legal authorities when required</li>
+            </ul>
+            <p>We use encryption, access control, and security audits. While we do our best, 100% security cannot be guaranteed.</p>
+            <p>We retain data as long as necessary for legal or business needs.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+            5. Your Rights & Cookie Policy
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#policyAccordion">
+          <div class="accordion-body">
+            <h5>Your Rights</h5>
+            <ul>
+              <li>Access, correction, deletion of your data</li>
+              <li>Restrict or object to processing</li>
+              <li>Withdraw consent anytime</li>
+              <li>Contact us to exercise your rights</li>
+            </ul>
+
+            <h5 class="mt-4">Cookies</h5>
+            <p>We use essential, functional, and analytics cookies. You can manage preferences below.</p>
+            <div class="d-flex gap-2 mt-3">
+              <button class="btn btn-outline-warning" onclick="manageCookies()">Manage Cookie Preferences</button>
+              <button class="btn btn-outline-danger" onclick="optOutMarketing()">Opt-Out of Marketing Emails</button>
             </div>
           </div>
         </div>
-        <!-- Add similar blocks here for each policy section -->
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer class="footer">
-    <div class="container text-center text-light">
-      <h5>Contact Info</h5>
-      <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:gurucreation@gmail.com">gurucreation@gmail.com</a></p>
-      <p><i class="fas fa-phone-alt"></i> <a href="tel:+254700545425">+254 700 545 425</a></p>
-      <p><i class="fas fa-clock"></i> Mon–Fri: 8 AM – 8 PM</p>
-      <p>If you do not agree with these terms, please don’t use our site.</p>
-      <hr class="bg-secondary" />
-      <p>&copy; 2025 Guru Creations. All Rights Reserved. <strong>Dennis Kibet</strong></p>
+<!-- Footer -->
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Footer logo 1 & Description -->
+      <div class="col-lg-3 col-md-6 footer-about">
+        <img
+          src="Assets/logo 1.png"
+          alt="Ambrel Crest Technologies"
+          class="footer-logo 1"
+        />
+        <p>
+          Empowering businesses with cutting-edge digital solutions,
+          data-driven strategies, and innovative branding.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="ourteam.html">Our Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-3 col-md-6 footer-contact">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@ambrelcrest.com">gurucreation@gmail.com</a>
+        </p>
+        <p>
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+254712345678">+254 700545425</a>
+        </p>
+        <p><i class="fas fa-clock"></i> Mon - Fri: 7:00 AM - 8:00 PM</p>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="col-lg-3 col-md-6 footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://web.facebook.com/gurucreations1?__cft__[0]=AZWYmgI2XhdiGIkCGUnEW1Nvya18wZh9cmwJxLXXrYhQst76Ohrg4osEGDYz_fAqiuEyyqScmKpL7fFZ6F-S3ZbnYwW3C3uSUWOrhIMYKOjgISge8eu2JtgeEQy4y09mwjS_sBXS27NT_famSpaExmsRx62Fs52suBiWqX-eS0e-tFdE9TXTZzGqAKpnytcjJf0&__tn__=-UC%2CP-R"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+
+          <a href="https://www.youtube.com/channel/UC7bPo3eMPD9RZ26ntEN03zA"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/254700545425"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
     </div>
-  </footer>
+    <!----privacy policy links---->
+    <div class="footer-links">
+      <a href="privacy and policy.html">Privacy Policy</a>
+      <span>|</span>
+      <a href="term of services.html">Terms of Service</a>
 
-  <a href="https://wa.me/254700545425" class="whatsapp-float" target="_blank" rel="noopener">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ambrel Crest Technologies. All Rights Reserved.</p>
+      <p>
+        Developed by <strong>Ambrel Crest Technologies</strong>, led by
+        <strong>Oliver Ishiva</strong>
+      </p>
+    </div>
+  </div>
+</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="ppolicy.js"></script>
+<!-- whatsup app floating button  -->
+<a
+  href="https://wa.me/254700545425"
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  ><i class="fab fa-whatsapp"></i
+></a>
+
+<!-- Back to top button  -->
+<button id="back-to-top-btn" aria-label="Back to top">▲</button>
+
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="./JS/ppolicy.js"></script>
+<script>AOS.init();</script>
 </body>
 </html>
