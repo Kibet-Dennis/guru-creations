@@ -974,90 +974,303 @@ body {
 }
 
 
-/* Portfolio Section */
-.portfolio {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: #fff;
-  padding: 100px 0;
-  text-align: center;
+:root {
+  --guru-orange: #ff7b00;
+  --guru-pink: #ff2e63;
+  --dark-bg: #1a1a2e; /* Deep dark background */
+  --card-bg-light: rgba(255, 255, 255, 0.05); /* Light glassmorphism effect */
+  --card-border: rgba(255, 255, 255, 0.1); /* Subtle border for glassmorphism */
 }
 
-.portfolio h2 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  background: linear-gradient(45deg, #ff7b00, #ff2e63);
+/* Base Body Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--dark-bg);
+  color: #f8f9fa; /* Light text color for contrast */
+  overflow-x: hidden; /* Prevent horizontal scroll on small devices */
+  line-height: 1.6;
+}
+
+/* Utility Class for Guru Creations Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, var(--guru-orange), var(--guru-pink));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
+  display: inline-block; /* Essential for background-clip to work */
 }
 
-.section-subtitle {
-  font-size: 1.2rem;
-  font-weight: 300;
-  max-width: 700px;
-  margin: auto;
+/* Section Introduction Styling */
+.section-intro {
+  padding: 80px 0;
+  text-align: center;
+  opacity: 0; /* Initial state for fade-up animation */
+  transform: translateY(20px); /* Initial state for slide-in animation */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+/* Class added by JS for animation */
+.section-intro.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-intro h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem); /* Responsive font size */
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section-intro .lead {
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive font size */
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Project Card Styling */
+.project-card {
+  background-color: var(--card-bg-light);
+  border: 1px solid var(--card-border);
+  border-radius: 15px; /* Rounded corners for modern look */
+  overflow: hidden; /* Hides image overflow on zoom */
+  position: relative;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  backdrop-filter: blur(5px); /* Glassmorphism effect */
+  -webkit-backdrop-filter: blur(5px); /* Safari support */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.5s ease-out; /* Smooth transitions */
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Lifts card on hover */
+  box-shadow: 0 8px 40px rgba(255, 123, 0, 0.3), 0 0 50px rgba(255, 46, 99, 0.3); /* Glowing effect */
+}
+
+.project-card img {
+  width: 100%;
+  height: 250px; /* Fixed height for consistent grid */
+  object-fit: cover; /* Ensures image covers area without distortion */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: transform 0.3s ease-in-out; /* Smooth image zoom */
+}
+
+.project-card:hover img {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.project-card .card-body {
+  padding: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-card .card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-card .card-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+}
+
+.project-card .category-tag {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--guru-orange), var(--guru-pink));
+  color: white;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.project-card .btn-view-case-study {
+  background: linear-gradient(90deg, var(--guru-orange), var(--guru-pink));
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 123, 0, 0.4); /* Soft shadow for button */
+}
+
+.project-card .btn-view-case-study:hover {
+  opacity: 0.9;
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 8px 20px rgba(255, 46, 99, 0.6); /* Enhanced shadow */
+}
+
+/* Filter Buttons Styling */
+.filter-buttons {
+  text-align: center;
   margin-bottom: 50px;
 }
 
-/* Portfolio Grid */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  padding: 0 20px;
-  justify-content: center;
+.filter-buttons .btn {
+  background-color: transparent;
+  border: 1px solid var(--guru-orange);
+  color: var(--guru-orange);
+  margin: 0 10px 10px 0;
+  border-radius: 25px; /* Pill-shaped buttons */
+  padding: 8px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
 }
 
-/* Portfolio Items */
-.portfolio-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.filter-buttons .btn:hover,
+.filter-buttons .btn.active {
+  background: linear-gradient(90deg, var(--guru-orange), var(--guru-pink));
+  color: white;
+  border-color: transparent; /* No border when active/hovered */
+  box-shadow: 0 5px 15px rgba(255, 123, 0, 0.4);
 }
 
-.portfolio-item img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.4s ease-in-out;
+/* Optional Add-Ons Sections */
+.optional-section {
+  padding: 60px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 50px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3); /* Inner shadow for depth */
 }
 
-.portfolio-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 15px 35px rgba(255, 123, 0, 0.3);
-}
-
-.portfolio-item:hover img {
-  transform: scale(1.1);
-}
-
-/* Portfolio Info */
-.portfolio-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+/* Stats Counter Styling */
+.stats-counter .stat-item {
+  text-align: center;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+}
+.stats-counter .stat-item .number {
+  font-size: clamp(2.5rem, 7vw, 3.5rem); /* Responsive font size */
+  font-weight: 700;
+  color: var(--guru-orange);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.stats-counter .stat-item .label {
+  font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font size */
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
 }
 
-.portfolio-item:hover .portfolio-info {
+/* Client Logos Grid Styling */
+.client-logos img {
+  max-width: 150px; /* Max width for logos */
+  height: auto;
+  filter: grayscale(100%) brightness(150%); /* Desaturated and slightly brighter */
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  margin: 15px; /* Spacing between logos */
+}
+.client-logos img:hover {
+  filter: grayscale(0%) brightness(100%); /* Full color on hover */
   opacity: 1;
 }
 
-.portfolio-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
+/* CTA After Portfolio Section */
+.cta-section {
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(90deg, var(--guru-pink), var(--guru-orange)); /* Brand gradient background */
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 50px rgba(255, 46, 99, 0.4); /* Prominent shadow */
+}
+.cta-section h2 {
+  font-size: clamp(2rem, 5vw, 2.5rem); /* Responsive font size */
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: white;
+}
+.cta-section .btn-contact {
+  background-color: white;
+  color: var(--dark-bg); /* Dark text on white button */
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.cta-section .btn-contact:hover {
+  background-color: var(--dark-bg);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.portfolio-info p {
-  font-size: 1rem;
-  opacity: 0.8;
+/* Modal Specific Styling for Lightbox */
+.modal-content {
+  background-color: var(--dark-bg);
+  border-radius: 15px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
+.modal-header {
+  border-bottom: 1px solid var(--card-border);
+  color: white;
+}
+.modal-title {
+  color: var(--guru-orange);
+  font-weight: 600;
+}
+.modal-body {
+  color: rgba(255, 255, 255, 0.9);
+}
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.modal-footer {
+  border-top: 1px solid var(--card-border);
+}
+.modal-footer .btn-close-modal {
+  background: linear-gradient(90deg, var(--guru-orange), var(--guru-pink));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.modal-footer .btn-close-modal:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* General Container Padding */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Subtle Geometric Background (Optional - example) */
+/* You can add a subtle background pattern here if desired */
+/* body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml,...'); Add a subtle SVG pattern here
+  opacity: 0.05;
+  z-index: -1;
+  pointer-events: none;
+} */
 
 /* Lightbox */
 .lightbox {
