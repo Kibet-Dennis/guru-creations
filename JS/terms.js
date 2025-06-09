@@ -58,6 +58,53 @@ async function downloadTermsPDF() {
 //   });
 // });
 
+// Footer section 
+// Smooth scroll to top when clicking the logo
+document.querySelector(".footer-logo").addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Whats up floating button 
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappBtn = document.querySelector(".whatsapp-float");
+
+  // Add bounce effect every 5 seconds
+  setInterval(() => {
+    whatsappBtn.classList.add("bounce");
+
+    setTimeout(() => {
+      whatsappBtn.classList.remove("bounce");
+    }, 1500);
+  }, 5000);
+});
+
+
+// Back to top button 
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTopBtn = document.getElementById("back-to-top-btn");
+
+  if (!backToTopBtn) return; // Ensure the button exists
+
+  // Show/hide button when scrolling
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  // Smooth scroll to top
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+;
+
+
 // Cookie Consent
 const cookieBanner = document.getElementById("cookie-banner");
 const acceptBtn = document.getElementById("accept-cookies");
