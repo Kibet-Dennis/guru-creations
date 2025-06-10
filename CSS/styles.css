@@ -1297,109 +1297,195 @@ body {
 }
 
 /* Blog Section Styling */
-.blog {
-  padding: 80px 0;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: #fff;
+.blog-section {
+  padding: 100px 0; /* Increased padding for more breathing room */
+  background: linear-gradient(
+    135deg,
+    #0a1828 0%,
+    #1b2d41 50%,
+    #2c405a 100%
+  ); /* Deeper, more refined gradient */
+  color: #e0e0e0; /* Softer white for text */
   text-align: center;
+  overflow: hidden; /* Ensures no overflow from animations */
 }
 
-.blog h2 {
-  font-size: 2.8rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+.blog-section h2 {
+  font-family: "Poppins", sans-serif; /* Modern, clean font */
+  font-size: 3.5rem; /* Larger, more impactful heading */
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff; /* Pure white for main heading */
+  position: relative;
+  display: inline-block;
+}
+
+.blog-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #ff7b00,
+    #ff2e63
+  ); /* Vibrant underline effect */
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 .section-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #ddd;
-}
-
-/* Blog Grid */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
+  font-family: "Roboto", sans-serif; /* Complementary, legible font */
+  font-size: 1.3rem;
+  margin-bottom: 60px; /* More space below subtitle */
+  color: #b0b0b0; /* Lighter grey for subtitle */
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
 /* Blog Post Card */
-.blog-post {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+.blog-post-card {
+  background: rgba(
+    255,
+    255,
+255,
+    0.08
+  ); /* Slightly more opaque background for better contrast */
+  border-radius: 15px; /* Softer rounded corners */
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother animation curve */
   cursor: pointer;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures cards in a row have equal height */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Initial subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for definition */
 }
 
-.blog-post:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+.blog-post-card:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4),
+    0 0 0 5px rgba(255, 123, 0, 0.3); /* More pronounced shadow with an accent glow */
 }
 
 /* Blog Image */
-.blog-img img {
+.blog-post-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  transition: transform 0.3s ease-in-out;
+  height: 220px; /* Slightly taller images */
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
-.blog-post:hover .blog-img img {
-  transform: scale(1.1);
+.blog-post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Slower, smoother zoom */
+}
+
+.blog-post-card:hover .blog-post-image img {
+  transform: scale(1.15); /* More pronounced zoom on hover */
 }
 
 /* Blog Content */
-.blog-content {
-  padding: 20px;
+.blog-post-content {
+  padding: 25px; /* Increased padding */
+  flex-grow: 1; /* Allows content to take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes button to the bottom */
 }
 
-.blog-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.blog-post-content h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem; /* Larger heading */
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+  line-height: 1.4;
 }
 
-.blog-content p {
-  font-size: 1rem;
-  color: #ccc;
-  margin-bottom: 15px;
+.blog-post-content p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.05rem; /* Slightly larger paragraph text */
+  color: #c0c0c0; /* Lighter grey for paragraph */
+  margin-bottom: 25px; /* More space before button */
+  flex-grow: 1; /* Ensures paragraphs take up available space */
 }
 
 /* Read More Button */
-.btn-read {
+.read-more-btn {
   display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 12px 25px; /* Larger button */
+  font-size: 1.05rem;
   font-weight: 600;
-  color: #fff;
-  background: linear-gradient(45deg, #ff7b00, #ff2e63);
-  border-radius: 8px;
+  color: #ffffff;
+  background: linear-gradient(
+    45deg,
+    #ff7b00 0%,
+    #ff2e63 100%
+  ); /* Original vibrant gradient */
+  border-radius: 50px; /* Pill-shaped button */
   transition: all 0.3s ease-in-out;
   text-decoration: none;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow on button */
+  align-self: flex-start; /* Aligns button to the left within its flex container */
 }
 
-.btn-read:hover {
-  background: linear-gradient(45deg, #ff2e63, #ff7b00);
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(255, 46, 99, 0.3);
+.read-more-btn:hover {
+  background: linear-gradient(
+    45deg,
+    #ff2e63 0%,
+    #ff7b00 100%
+  ); /* Reverse gradient on hover */
+  transform: scale(1.08) translateY(-3px); /* Slight scale and lift on hover */
+  box-shadow: 0 8px 20px rgba(255, 46, 99, 0.4); /* More pronounced shadow */
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .blog-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 991px) {
+  .blog-section h2 {
+    font-size: 3rem;
   }
-
-  .blog h2 {
-    font-size: 2.2rem;
+  .section-subtitle {
+    font-size: 1.15rem;
+  }
+  .blog-post-content h3 {
+    font-size: 1.5rem;
   }
 }
 
+@media (max-width: 767px) {
+  .blog-section {
+    padding: 80px 0;
+  }
+  .blog-section h2 {
+    font-size: 2.5rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  .blog-posts-container .col-md-6 {
+    flex: 0 0 100%; /* Ensure full width on smaller screens */
+    max-width: 100%;
+  }
+  .blog-post-content h3 {
+    font-size: 1.3rem;
+  }
+  .blog-post-content p {
+    font-size: 0.95rem;
+  }
+  .read-more-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+} 
 /* Our Team Section */
 .our-team {
   padding: 80px 0;

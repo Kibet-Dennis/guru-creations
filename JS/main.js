@@ -400,9 +400,17 @@ document.querySelectorAll(".blog-post").forEach((post) => {
   });
 });
 
+// // Lazy load blog images for performance boost
+// document.addEventListener("DOMContentLoaded", function () {
+//   const images = document.querySelectorAll(".blog-img img");
+//   images.forEach((img) => {
+//     img.setAttribute("loading", "lazy");
+//   });
+// });
+
 // Lazy load blog images for performance boost
 document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll(".blog-img img");
+  const images = document.querySelectorAll(".blog-post-image img"); 
   images.forEach((img) => {
     img.setAttribute("loading", "lazy");
   });
