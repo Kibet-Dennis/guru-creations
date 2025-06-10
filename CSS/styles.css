@@ -100,7 +100,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: 0; /* Below canvas and text */
   filter: brightness(40%) contrast(110%);
 }
 
@@ -111,23 +111,23 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
-  z-index: 1;
+  z-index: 1; /* Above video, below text */
+  pointer-events: auto; /* Allow mouse events for particle interaction */
 }
 
 /* Hero Text */
 .hero-text {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Above canvas */
   max-width: 600px;
-  /* margin: auto;  */
-  align-items: center;
+  text-align: left; /* Better readability */
 }
 
 .hero-text h1 {
   font-size: 3rem;
   font-weight: 700;
   animation: fadeText 1.5s ease-in-out;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Improve text visibility */
 }
 
 @keyframes fadeText {
@@ -178,20 +178,6 @@ body {
   background: rgba(255, 255, 255, 0.4);
 }
 
-/* Hero Image */
-.hero-img {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-img img {
-  max-width: 100%;
-  margin-top: 30px;
-  border-radius: 50px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s ease-in-out;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .hero {
@@ -202,12 +188,7 @@ body {
   .hero-text h1 {
     font-size: 2.5rem;
   }
-
-  .hero-img img {
-    width: 100%;
-  }
 }
-
 /* Why Choose Us Section */
 .why-choose-us {
   background: linear-gradient(135deg, #1e1e2e, #121212);

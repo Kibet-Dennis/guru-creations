@@ -21,7 +21,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-
 // Hero section 
 document.addEventListener("DOMContentLoaded", function () {
   // Dynamic Text Animation
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "Elevate Your Brand with Digital Excellence",
     "Innovative Solutions for a Digital World",
     "Your Success, Our Passion",
-    "Building the Future of Digital Media"
+    "Building the Future of Digital Media",
   ];
   let textIndex = 0;
 
@@ -48,24 +47,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const ctx = canvas.getContext("2d");
   let particles = [];
 
+  // Set canvas size
   function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   }
 
-  function Particle(x, y) {
-    this.x = x;
-    this.y = y;
+  // Particle constructor
+  function Particle(x, y, isAmbient = false) {
+    this.x = x || Math.random() * canvas.width; // Random x for ambient particles
+    this.y = y || Math.random() * canvas.height; // Random y for ambient particles
     this.size = Math.random() * 3 + 1;
-    this.speedX = Math.random() * 2 - 1;
-    this.speedY = Math.random() * 2 - 1;
-    this.alpha = 1;
+    this.speedX = Math.random() * 1 - 0.5; // Slower movement
+    this.speedY = Math.random() * 1 - 0.5;
+    this.alpha = isAmbient ? Math.random() * 0.5 + 0.2 : 1; // Lower alpha for ambient
+    this.life = isAmbient ? Math.random() * 100 + 50 : 50; // Longer life for ambient
   }
 
   Particle.prototype.update = function () {
     this.x += this.speedX;
     this.y += this.speedY;
-    this.alpha -= 0.02;
+    this.life -= 0.5; // Slower fade
+    this.alpha = this.life / 50; // Alpha tied to life
+    // Bounce off edges
+    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
   };
 
   Particle.prototype.draw = function () {
@@ -75,27 +81,40 @@ document.addEventListener("DOMContentLoaded", function () {
     ctx.fill();
   };
 
+  // Generate ambient particles
+  function generateAmbientParticles() {
+    for (let i = 0; i < 50; i++) {
+      particles.push(new Particle(null, null, true));
+    }
+  }
+
   function animateParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles = particles.filter(p => p.alpha > 0);
-    particles.forEach(particle => {
+    particles = particles.filter((p) => p.life > 0); // Remove dead particles
+    particles.forEach((particle) => {
       particle.update();
       particle.draw();
     });
+    // Add new ambient particles periodically
+    if (Math.random() < 0.1) {
+      particles.push(new Particle(null, null, true));
+    }
     requestAnimationFrame(animateParticles);
   }
 
-  window.addEventListener("resize", resizeCanvas);
+  // Mouse interaction
   canvas.addEventListener("mousemove", function (event) {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 3; i++) {
       particles.push(new Particle(event.clientX, event.clientY));
     }
   });
 
+  // Initialize
+  window.addEventListener("resize", resizeCanvas);
   resizeCanvas();
+  generateAmbientParticles();
   animateParticles();
 });
-
 
 // Why choose us  section 
 // Adding Interactive Animations on Scroll
