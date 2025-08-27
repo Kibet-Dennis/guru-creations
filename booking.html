@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book With Us | Guru Creations Media</title>
+  <link rel="stylesheet" href="./CSS/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar (copy from index.html if needed) -->
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="Assets/icon_log-remove back ground.png" alt="Guru Creations Media" width="35" height="35" class="me-2" />
+        <span class="brand-name">Guru Creations</span>
+      </a>
+      <!-- ...navbar links... -->
+    </div>
+  </nav>
+
+  <section class="booking-section" style="margin-top:100px;">
+    <div class="container">
+      <h1>Book With Us</h1>
+      <p>
+        Ready to start your project or book our services? Fill out the form below and our team will get in touch with you soon!
+      </p>
+      <form action="contact.php" method="POST" class="booking-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="service" placeholder="Service Needed" required />
+        <input type="text" name="date" placeholder="Preferred Date" />
+        <textarea name="details" placeholder="Project Details or Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Submit Booking</button>
+      </form>
+      <div class="contact-info" style="margin-top:30px;">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:gurucreations@gmail.com">gurucreations@gmail.com</a></p>
+        <p><i class="fas fa-phone-alt"></i> <a href="tel:+254700545425">+254 700545425</a></p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
