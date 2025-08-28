@@ -534,7 +534,7 @@
               <li>✔ Basic Branding Package</li>
               <li>✔ Monthly Analytics Report</li>
             </ul>
-            <a href="contact.html" class="btn btn-primary">Get Started</a>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#starterModal">Get Started</a>
           </div>
 
           <!-- Pro Plan -->
@@ -874,7 +874,7 @@
     <!-- 8. CTA (Call-to-Action) After Portfolio -->
     <section class="cta-section" data-aos="fade-up" data-aos-delay="600">
         <h2>Inspired by our work? Let’s build something amazing together.</h2>
-        <a href="#" class="btn btn-contact">Book A Consultation</a>
+          <a href="#contact" class="btn btn-secondary">Contact Us</a>
     </section>
 
 </div> <!-- End of .container -->
@@ -1338,5 +1338,29 @@
 
     <!-- Custom JS -->
     <script src="./JS/main.js"></script>
+
+    <!-- Pricing Details Modal -->
+<div class="modal fade" id="starterModal" tabindex="-1" aria-labelledby="starterModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="starterModalLabel">Starter Plan Details</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Social Media Management: We handle your posts, engagement, and growth.</li>
+          <li>Basic Branding Package: Logo, color palette, and brand guidelines.</li>
+          <li>Monthly Analytics Report: Easy-to-read summary of your progress.</li>
+          <li>Email support included.</li>
+          <li>Cancel anytime, no hidden fees.</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary mt-3">Contact Us to Get Started</a>
+      </div>
+    </div>
+  </div>
+</div>
   </body>
 </html>
