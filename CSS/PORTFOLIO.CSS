@@ -1,0 +1,298 @@
+/* ---------------------------
+   Guru Creations Portfolio
+   style.css
+--------------------------- */
+
+:root {
+  --bg: #0f1724;
+  --card: #141c2c;
+  --muted: #9aa4b2;
+  --accent: #3b82f6;
+  --text: #f5f6f7;
+  --radius: 14px;
+  --shadow: 0 4px 16px rgba(0,0,0,0.25);
+  --transition: all 0.3s ease;
+  --container: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ---------------------------
+   Layout Helpers
+--------------------------- */
+.container {
+  max-width: var(--container);
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+/* ---------------------------
+   Navbar
+--------------------------- */
+.header {
+  background: rgba(15,23,36,0.9);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--container);
+  margin: auto;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.nav-link {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--muted);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+/* ---------------------------
+   Hero
+--------------------------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 1rem;
+  max-width: var(--container);
+  margin: auto;
+}
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.hero-left p {
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.button:hover {
+  background: #2563eb;
+}
+
+.contact-links {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.contact-links a:hover {
+  color: #60a5fa;
+}
+
+/* Profile Card */
+.profile-card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  max-width: 280px;
+}
+
+.profile-avatar-img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------
+   Projects
+--------------------------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+}
+
+.project-card h3 {
+  margin: 1rem;
+  color: var(--accent);
+}
+
+.project-card p {
+  margin: 0 1rem 1rem;
+  color: var(--muted);
+}
+
+.project-links {
+  margin: 0 1rem 1rem;
+}
+
+.project-links a {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* ---------------------------
+   Gallery
+--------------------------- */
+.gallery-tabs {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: var(--card);
+  color: var(--text);
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.gallery-grid {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid.active {
+  display: grid;
+}
+
+.gallery-item img,
+.gallery-item iframe {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ---------------------------
+   Footer
+--------------------------- */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0b1220;
+  color: var(--muted);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* ---------------------------
+   Floating Contact
+--------------------------- */
+.floating-contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  z-index: 999;
+}
+
+.floating-contact:hover {
+  background: #2563eb;
+  transform: scale(1.1);
+}
+
+/* ---------------------------
+   Responsive
+--------------------------- */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-left,
+  .profile-card {
+    max-width: 100%;
+  }
+}
