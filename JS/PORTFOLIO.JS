@@ -1,33 +1,60 @@
-// Guru Creations Portfolio Interactivity
-document.addEventListener("DOMContentLoaded", () => {
-  // Gallery Tabs
-  const tabs = document.querySelectorAll(".tab-btn");
-  const grids = document.querySelectorAll(".gallery-grid");
+// === FLOATING CONTACT BUTTON & MODAL ===
+const floatContact = document.getElementById('floatContact');
+const modalBackdrop = document.getElementById('modalBackdrop');
+const cfCancel = document.getElementById('cf-cancel');
 
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
+floatContact.addEventListener('click', () => {
+  modalBackdrop.classList.add('active');
+});
+cfCancel.addEventListener('click', () => {
+  modalBackdrop.classList.remove('active');
+});
 
-      const target = tab.dataset.tab;
-      grids.forEach(grid => {
-        grid.classList.toggle("active", grid.id === target);
-      });
+// === LIGHTBOX ===
+const lightbox = document.getElementById('lightbox');
+const lightboxContent = document.getElementById('lightboxContent');
+const lbClose = document.getElementById('lb-close');
+
+document.querySelectorAll('[data-lightbox]').forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault();
+    const src = el.querySelector('img').src;
+    lightboxContent.innerHTML = `<img src="${src}" alt="Preview" />`;
+    lightbox.classList.add('active');
+  });
+});
+lbClose.addEventListener('click', () => {
+  lightbox.classList.remove('active');
+});
+
+// === FILTER BUTTONS ===
+const filterBtns = document.querySelectorAll('.filter-buttons .btn');
+const projectItems = document.querySelectorAll('.project-item');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.dataset.filter;
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    projectItems.forEach(item => {
+      if(filter === 'all') item.style.display = 'block';
+      else item.style.display = item.classList.contains(filter) ? 'block' : 'none';
     });
   });
+});
 
-  // Floating Contact Button
-  const floatBtn = document.getElementById("floatContact");
-  floatBtn.addEventListener("click", () => {
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-  });
+// === CONTACT FORM (optional send logic) ===
+const cfSend = document.getElementById('cf-send');
+cfSend.addEventListener('click', () => {
+  const name = document.getElementById('cf-name').value;
+  const email = document.getElementById('cf-email').value;
+  const message = document.getElementById('cf-message').value;
 
-  // Navbar Smooth Scroll
-  document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute("href"));
-      target.scrollIntoView({ behavior: "smooth" });
-    });
-  });
+  if(name && email && message) {
+    alert(`Thank you ${name}, your message has been sent!`);
+    modalBackdrop.classList.remove('active');
+  } else {
+    alert('Please fill all fields.');
+  }
 });

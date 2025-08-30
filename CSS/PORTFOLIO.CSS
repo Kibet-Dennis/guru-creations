@@ -1,298 +1,234 @@
-/* ---------------------------
-   Guru Creations Portfolio
-   style.css
---------------------------- */
-
 :root {
-  --bg: #0f1724;
-  --card: #141c2c;
-  --muted: #9aa4b2;
-  --accent: #3b82f6;
-  --text: #f5f6f7;
-  --radius: 14px;
-  --shadow: 0 4px 16px rgba(0,0,0,0.25);
-  --transition: all 0.3s ease;
-  --container: 1200px;
+  --accent: #00bfff;
+  --primary: #1a1a2e;
+  --secondary: #f5f5f5;
+  --muted: #888;
+  --radius: 12px;
+  --transition: 0.3s ease-in-out;
+  --shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
+/* General Reset */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Poppins", sans-serif;
+  background-color: var(--secondary);
+  color: var(--primary);
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
-/* ---------------------------
-   Layout Helpers
---------------------------- */
-.container {
-  max-width: var(--container);
-  margin: auto;
-  padding: 3rem 1rem;
-}
-
-.section-title {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: var(--accent);
-  text-align: center;
-}
-
-/* ---------------------------
-   Navbar
---------------------------- */
+/* Header */
 .header {
-  background: rgba(15,23,36,0.9);
-  backdrop-filter: blur(10px);
-  padding: 1rem 2rem;
+  background: #fff;
+  padding: 15px 30px;
+  box-shadow: var(--shadow);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: var(--container);
-  margin: auto;
 }
-
-.brand {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--accent);
-}
-
 .nav-link {
-  margin-left: 1.5rem;
+  margin-left: 20px;
+  color: var(--primary);
   text-decoration: none;
-  color: var(--muted);
-  transition: var(--transition);
+  transition: color var(--transition);
 }
-
 .nav-link:hover {
   color: var(--accent);
 }
+.brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
 
-/* ---------------------------
-   Hero
---------------------------- */
+/* Hero */
 .hero {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  padding: 4rem 1rem;
-  max-width: var(--container);
-  margin: auto;
+  align-items: flex-start;
+  padding: 60px 30px;
+  gap: 20px;
 }
-
 .hero-left h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
 }
-
-.accent {
-  color: var(--accent);
-}
-
 .hero-left p {
-  margin-bottom: 1.5rem;
-  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
-
 .button {
-  display: inline-block;
   background: var(--accent);
   color: #fff;
-  padding: 0.6rem 1.2rem;
+  padding: 10px 20px;
   border-radius: var(--radius);
   text-decoration: none;
-  font-weight: 500;
-  transition: var(--transition);
+  transition: background var(--transition);
 }
-
 .button:hover {
-  background: #2563eb;
+  background: #009acd;
 }
-
-.contact-links {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
 .contact-links a {
-  color: var(--accent);
+  display: inline-block;
+  margin-right: 10px;
+  color: var(--primary);
   text-decoration: none;
-  font-weight: 500;
-  transition: var(--transition);
+  transition: color var(--transition);
 }
-
 .contact-links a:hover {
-  color: #60a5fa;
+  color: var(--accent);
 }
 
 /* Profile Card */
 .profile-card {
-  background: var(--card);
-  padding: 1.5rem;
+  background: #fff;
   border-radius: var(--radius);
-  text-align: center;
+  padding: 20px;
   box-shadow: var(--shadow);
-  max-width: 280px;
+  text-align: center;
 }
-
 .profile-avatar-img {
   width: 100%;
-  border-radius: var(--radius);
-  margin-bottom: 1rem;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
-/* ---------------------------
-   Projects
---------------------------- */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background: var(--card);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-card img {
-  width: 100%;
-  display: block;
-}
-
-.project-card h3 {
-  margin: 1rem;
-  color: var(--accent);
-}
-
-.project-card p {
-  margin: 0 1rem 1rem;
-  color: var(--muted);
-}
-
-.project-links {
-  margin: 0 1rem 1rem;
-}
-
-.project-links a {
-  color: var(--accent);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-/* ---------------------------
-   Gallery
---------------------------- */
-.gallery-tabs {
+/* Section Titles */
+.section-title {
+  font-size: 2rem;
+  margin: 40px 0 20px;
   text-align: center;
-  margin-bottom: 2rem;
 }
-
-.tab-btn {
-  background: var(--card);
-  color: var(--text);
-  border: none;
-  padding: 0.5rem 1rem;
-  margin: 0.3rem;
-  border-radius: var(--radius);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.tab-btn.active,
-.tab-btn:hover {
-  background: var(--accent);
-  color: #fff;
-}
-
-.gallery-grid {
-  display: none;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.gallery-grid.active {
-  display: grid;
-}
-
-.gallery-item img,
-.gallery-item iframe {
-  width: 100%;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-/* ---------------------------
-   Footer
---------------------------- */
-.footer {
-  text-align: center;
-  padding: 2rem;
-  background: #0b1220;
+.muted {
   color: var(--muted);
-  margin-top: 2rem;
   font-size: 0.9rem;
 }
 
-/* ---------------------------
-   Floating Contact
---------------------------- */
+/* Project Cards */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-card img,
+.project-card video {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+.project-card h3 {
+  margin: 10px;
+}
+.project-card p {
+  margin: 0 10px 10px;
+  font-size: 0.95rem;
+}
+.project-links {
+  padding: 10px;
+  text-align: center;
+}
+.project-links a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 5px;
+}
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+/* Floating Contact Button */
 .floating-contact {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  right: 30px;
   background: var(--accent);
   color: #fff;
   border: none;
+  padding: 15px;
   border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   box-shadow: var(--shadow);
-  transition: var(--transition);
   z-index: 999;
+  transition: background var(--transition);
 }
-
 .floating-contact:hover {
-  background: #2563eb;
-  transform: scale(1.1);
+  background: #009acd;
 }
 
-/* ---------------------------
-   Responsive
---------------------------- */
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-left,
-  .profile-card {
-    max-width: 100%;
-  }
+/* Modal Backdrop */
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-backdrop.active {
+  display: flex;
+}
+.modal {
+  background: #fff;
+  padding: 30px;
+  border-radius: var(--radius);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: var(--shadow);
+}
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: var(--radius);
+  border: 1px solid #ddd;
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.lightbox.active {
+  display: flex;
+}
+.lightbox .panel {
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+}
+.lightbox img {
+  max-width: 100%;
+  max-height: 80vh;
 }
