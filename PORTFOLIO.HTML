@@ -6,12 +6,13 @@
   <title>Guru Creations — Portfolio | Kibet Dennis</title>
 
   <!-- Link CSS -->
-  <link rel="stylesheet" href="CSS/PORTFOLIO.css" />
+  <link rel="stylesheet" href="CSS/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <!-- Header -->
   <header class="header">
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="brand">Guru Creations</div>
       <a class="nav-link" href="#about">About</a>
       <a class="nav-link" href="#projects">Projects</a>
@@ -21,8 +22,8 @@
   </header>
 
   <!-- Hero / About -->
-  <main>
-    <section class="container hero" id="about">
+  <main id="main-content" role="main">
+    <section class="container hero" id="about" aria-label="About">
       <div class="hero-left">
         <h1>Hi — I'm <span style="color:var(--accent)">Kibet Dennis</span></h1>
         <p>
@@ -44,8 +45,8 @@
 <aside style="min-width:240px; max-width:320px;">
   <div class="profile-card">
     <!-- ✅ Clickable profile image -->
-    <a href="Assets/PORTFOLIO/" class="profile-avatar-link" data-lightbox="profile">
-      <img src="images/guru.jpg" alt="Kibet Dennis" class="profile-avatar-img">
+    <a href="Assets/PORTFOLIO/" class="profile-avatar-link" data-lightbox="profile" aria-label="Open profile image">
+      <img src="Assets/PORTFOLIO/GURU.jpg" alt="Portrait of Kibet Dennis" class="profile-avatar-img">
     </a>
 
     <div style="text-align:center">
@@ -59,13 +60,13 @@
     </section>
 
     <!-- Projects -->
-    <section class="container" id="projects">
+    <section class="container" id="projects" aria-label="Featured projects">
       <h2 class="section-title">Featured Projects — Guru Creations</h2>
       <div class="project-grid">
 
         <!-- Example Project: Live Church Service -->
         <article class="project-card" data-full="livestream">
-          <div class="thumb"><img src="images/livestream.jpg" alt="Livestream Project" /></div>
+          <div class="thumb"><img src="Assets/Livestream photo.webp" alt="Livestream Project" /></div>
           <h3>Live Church Service Broadcast</h3>
           <p>High-quality livestream production for local church events — OBS, multi-camera switching, custom overlays and lower-thirds.</p>
           <div class="project-links">
@@ -75,7 +76,7 @@
 
         <!-- Example Project: Wedding Photography -->
         <article class="project-card" data-full="wedding">
-          <div class="thumb"><img src="images/wedding.jpg" alt="Wedding Photography" /></div>
+          <div class="thumb"><img src="Assets/Joe.jpg" alt="Wedding Photography" /></div>
           <h3>Wedding & Events Photography</h3>
           <p>Capturing timeless moments — portraits, candid wedding days, and branded event shoots with quick delivery.</p>
           <div class="project-links">
@@ -85,7 +86,7 @@
 
         <!-- Example Project: YouTube -->
         <article class="project-card" data-full="youtube">
-          <div class="thumb"><img src="images/youtube.jpg" alt="YouTube Guru Creations" /></div>
+          <div class="thumb"><img src="Assets/logo 1.png" alt="YouTube Guru Creations" /></div>
           <h3>YouTube Content Creation</h3>
           <p>Educational & inspirational videos on tech, livestreaming tips, and brand storytelling — optimized for growth.</p>
           <div class="project-links">
@@ -95,7 +96,7 @@
 
         <!-- Example Project: Web Dev -->
         <article class="project-card" data-full="webdev">
-          <div class="thumb"><img src="images/webdev.jpg" alt="Web Development Project" /></div>
+          <div class="thumb"><img src="Assets/Website traffice blog 3.webp" alt="Web Development Project" /></div>
           <h3>Web Development Projects</h3>
           <p>Modern websites built with speed and UX in mind — portfolio sites, event pages, and promo microsites.</p>
           <div class="project-links">
@@ -105,7 +106,7 @@
 
         <!-- Example Project: Gallery -->
         <article class="project-card" data-full="gallery">
-          <div class="thumb"><img src="images/gallery.jpg" alt="Photography Gallery" /></div>
+          <div class="thumb"><img src="Assets/Visual branding.webp" alt="Photography Gallery" /></div>
           <h3>Photography Gallery Showcase</h3>
           <p>Curated photo stories — street, portrait, and event photography compiled for quick client previews.</p>
           <div class="project-links">
@@ -116,7 +117,7 @@
         <!---camera operations-->
         <article class="project-card">
           <div class="thumb">
-            <img src="images/cameraoperations.jpg" alt="Camera Operations Project" />
+            <img src="Assets/Camera image 2.jpeg" alt="Camera Operations Project" />
           </div>
           <h3>Camera Operations Projects</h3>
           <p>Expertise in camera setups, live switching, and on-location production for various events.</p>
@@ -128,7 +129,7 @@
       <!---tech assistant-->
       <article class="project-card">
         <div class="thumb">
-          <img src="images/techassistant.jpg" alt="Tech Assistant Project" />
+          <img src="Assets/Social media marketing.webp" alt="Tech Assistant Project" />
         </div>
         <h3>Tech Assistant Projects</h3>
         <p>AI-driven solutions for productivity and creativity — virtual assistants, chatbots, and more.</p>
@@ -140,7 +141,7 @@
       <!---media consaltancy-->
       <article class="project-card">
         <div class="thumb">
-          <img src="images/mediaconsultancy.jpg" alt="Media Consultancy Project" />
+          <img src="Assets/Graphic design image with headphones.webp" alt="Media Consultancy Project" />
         </div>
         <h3>Media Consultancy Projects</h3>
         <p>Strategic media planning and consultancy for brands and creators to maximize their reach.</p>
@@ -153,7 +154,7 @@
     </section> <!-- ADD: close the #projects section -->
     
      <!-- ✅ Gallery Section -->
-    <section class="container" id="gallery">
+    <section class="container" id="gallery" aria-label="Gallery">
       <h2 class="section-title">Gallery — Photos & Videos</h2>
       <p class="muted">A showcase of my photography highlights and video productions.</p>
 
@@ -161,7 +162,7 @@
         <!-- Photo 1 -->
         <article class="project-card">
           <div class="thumb">
-            <img src="images/gallery-photo1.jpg" alt="Wedding Photography" />
+            <img src="Assets/Hero section one.webp" alt="Wedding Photography" />
           </div>
           <h3>Wedding Moments</h3>
           <p>Capturing love stories through timeless photography.</p>
@@ -173,7 +174,7 @@
         <!-- Photo 2 -->
         <article class="project-card">
           <div class="thumb">
-            <img src="images/gallery-photo2.jpg" alt="Event Photography" />
+            <img src="Assets/Namuli new Img.jpg" alt="Event Photography" />
           </div>
           <h3>Event Highlights</h3>
           <p>Energy-filled photos from live concerts and events.</p>
@@ -185,7 +186,7 @@
         <!-- Video 1 -->
         <article class="project-card">
           <div class="thumb">
-            <video src="videos/sample1.mp4" muted loop autoplay playsinline></video>
+            <video src="Assets/video 1.mp4" muted loop autoplay playsinline></video>
           </div>
           <h3>Livestream Highlight</h3>
           <p>A clip from one of my livestream productions.</p>
@@ -193,48 +194,47 @@
             <a href="videos/sample1.mp4" target="_blank">Watch Video</a>
           </div>
         </article>
-
-
+      </div> <!-- end .project-grid -->
     </section>
     
     <!-- Contact -->
-    <section class="container" id="contact">
+    <section class="container" id="contact" aria-label="Contact">
       <h2 class="section-title">Let’s collaborate</h2>
       <p class="muted">I take on livestreams, event shoots, and web builds. Send a message or use the contact button in the corner.</p>
 
       <div class="contact-links">
         <a href="mailto:kibetdennis4136@gmail.com">Email</a>
         <a href="tel:+254700545425">Call</a>
-        <a href="https://www.youtube.com/@gurucreationltd" target="_blank">YouTube</a> <!-- FIX: add missing quote -->
+        <a href="https://www.youtube.com/@gurucreationltd" target="_blank" rel="noopener">YouTube</a>
       </div>
     </section>
 
   <!-- Floating contact button -->
-  <button class="floating-contact" id="floatContact" title="Contact">✉️</button>
+  <button class="floating-contact" id="floatContact" title="Contact" aria-controls="modalBackdrop" aria-expanded="false" aria-label="Open contact dialog">✉️</button>
 
   <!-- Contact Modal -->
-  <div class="modal-backdrop" id="modalBackdrop">
-    <div class="modal">
-      <h3>Contact — Guru Creations</h3>
-      <p class="muted">Send a quick message or email <strong>kibetdennis4136@gmail.com</strong></p>
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="contactModalTitle" aria-describedby="contactModalDesc">
+    <div class="modal" tabindex="-1">
+      <h3 id="contactModalTitle">Contact — Guru Creations</h3>
+      <p id="contactModalDesc" class="muted">Send a quick message or email <strong>kibetdennis4136@gmail.com</strong></p>
 
       <div class="form-row"><input id="cf-name" type="text" placeholder="Your name" /></div>
       <div class="form-row"><input id="cf-email" type="email" placeholder="Email" /></div>
       <div class="form-row"><textarea id="cf-message" rows="4" placeholder="Message"></textarea></div>
 
       <div class="actions">
-        <button id="cf-cancel" class="nav-link">Cancel</button>
-        <button id="cf-send" class="button">Send</button>
+        <button id="cf-cancel" class="nav-link" aria-label="Cancel contact form">Cancel</button>
+        <button id="cf-send" class="button" aria-label="Send contact form">Send</button>
       </div>
     </div>
   </div>
 
   <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <div class="panel">
-      <div id="lightboxContent"></div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-hidden="true" aria-labelledby="lightboxTitle">
+    <div class="panel" tabindex="-1" role="document">
+      <div id="lightboxContent" aria-live="polite"></div>
       <div style="margin-top:10px; text-align:right;">
-        <button id="lb-close" class="nav-link">Close</button>
+        <button id="lb-close" class="nav-link" aria-label="Close lightbox">Close</button>
       </div>
     </div>
   </div> <!-- Footer -->
