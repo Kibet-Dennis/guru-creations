@@ -130,6 +130,21 @@ body {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Improve text visibility */
 }
 
+/* Hero Image */
+.hero-image {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(255, 123, 0, 0.3));
+}
+
 @keyframes fadeText {
   0% {
     opacity: 0;

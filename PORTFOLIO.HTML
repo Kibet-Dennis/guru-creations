@@ -1,249 +1,188 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Guru Creations — Portfolio | Kibet Dennis</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guru Creations | Kibet Dennis</title>
 
-  <!-- Link CSS -->
-  <link rel="stylesheet" href="CSS/styles.css" />
+<meta name="description" content="Guru Creations portfolio of Kibet Dennis. Professional photography, livestream production, videography and web development in Kenya.">
+
+<link rel="stylesheet" href="CSS/portfolio.css.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  <!-- Header -->
-  <header class="header">
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <div class="brand">Guru Creations</div>
-      <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#projects">Projects</a>
-      <a class="nav-link" href="#gallery">Gallery</a>
-      <a class="nav-link" href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <!-- Hero / About -->
-  <main id="main-content" role="main">
-    <section class="container hero" id="about" aria-label="About">
-      <div class="hero-left">
-        <h1>Hi — I'm <span style="color:var(--accent)">Kibet Dennis</span></h1>
-        <p>
-          Founder of <strong>Guru Creations</strong>. I build livestream setups, produce videos, shoot photography, and craft small websites for creators & events.
-          I make technical stuff look cinematic and make creative work earn attention.
-        </p>
-        <a href="#projects" class="button">View My Work</a>
+<header>
+<div class="logo">Guru<span>Creations</span></div>
 
-        <div style="margin-top:14px" class="contact-links">
-          <a href="mailto:kibetdennis4136@gmail.com">Email</a>
-          <a href="tel:+254700545425">Call</a>
-          <a href="https://www.youtube.com/@GuruCreations" target="_blank">YouTube</a>
-          <a href="https://www.instagram.com/gurucreations_kenya/" target="_blank">Instagram</a>
-          <a href="https://github.com/kibetdennis4136" target="_blank">GitHub</a>
-        </div>
-      </div>
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#videos">Videos</a>
+<a href="#booking">Booking</a>
+<a href="#contact">Contact</a>
+</nav>
 
- <!-- quick profile card -->
-<aside style="min-width:240px; max-width:320px;">
-  <div class="profile-card">
-    <!-- ✅ Clickable profile image -->
-    <a href="Assets/PORTFOLIO/" class="profile-avatar-link" data-lightbox="profile" aria-label="Open profile image">
-      <img src="Assets/PORTFOLIO/GURU.jpg" alt="Portrait of Kibet Dennis" class="profile-avatar-img">
-    </a>
+<a href="#booking" class="btn">Book Now</a>
+</header>
 
-    <div style="text-align:center">
-      <strong>Kibet Dennis</strong>
-      <div class="muted">Digital Creator • Livestream • Photo • Web Dev</div>
-      <div style="margin-top:10px"><a class="button" href="#contact">Hire Me</a></div>
-    </div>
-  </div>
-</aside>
 
-    </section>
+<section class="hero">
+<video autoplay muted loop class="hero-video">
+<source src="Assets/video-bg.mp4" type="video/mp4">
+</video>
 
-    <!-- Projects -->
-    <section class="container" id="projects" aria-label="Featured projects">
-      <h2 class="section-title">Featured Projects — Guru Creations</h2>
-      <div class="project-grid">
+<div class="hero-overlay">
+<h1>I Create <span id="typing"></span></h1>
+<p>Photography • Livestream • Video Production • Web Development</p>
+<a href="#portfolio" class="btn">View Portfolio</a>
+</div>
+</section>
 
-        <!-- Example Project: Live Church Service -->
-        <article class="project-card" data-full="livestream">
-          <div class="thumb"><img src="Assets/Livestream photo.webp" alt="Livestream Project" /></div>
-          <h3>Live Church Service Broadcast</h3>
-          <p>High-quality livestream production for local church events — OBS, multi-camera switching, custom overlays and lower-thirds.</p>
-          <div class="project-links">
-            <a href="https://www.facebook.com/GuruCreationsLive" target="_blank" rel="noopener">View Live (FB)</a>
-          </div>
-        </article>
 
-        <!-- Example Project: Wedding Photography -->
-        <article class="project-card" data-full="wedding">
-          <div class="thumb"><img src="Assets/Joe.jpg" alt="Wedding Photography" /></div>
-          <h3>Wedding & Events Photography</h3>
-          <p>Capturing timeless moments — portraits, candid wedding days, and branded event shoots with quick delivery.</p>
-          <div class="project-links">
-            <a href="https://www.instagram.com/gurucreations_kenya/" target="_blank" rel="noopener">Instagram</a>
-          </div>
-        </article>
+<section class="section reveal" id="about">
+<div class="about-grid">
 
-        <!-- Example Project: YouTube -->
-        <article class="project-card" data-full="youtube">
-          <div class="thumb"><img src="Assets/logo 1.png" alt="YouTube Guru Creations" /></div>
-          <h3>YouTube Content Creation</h3>
-          <p>Educational & inspirational videos on tech, livestreaming tips, and brand storytelling — optimized for growth.</p>
-          <div class="project-links">
-            <a href="https://www.youtube.com/@gurucreationltd" target="_blank" rel="noopener">YouTube Channel</a>
-          </div>
-        </article>
+<img src="Assets/guru.jpg" alt="Kibet Dennis">
 
-        <!-- Example Project: Web Dev -->
-        <article class="project-card" data-full="webdev">
-          <div class="thumb"><img src="Assets/Website traffice blog 3.webp" alt="Web Development Project" /></div>
-          <h3>Web Development Projects</h3>
-          <p>Modern websites built with speed and UX in mind — portfolio sites, event pages, and promo microsites.</p>
-          <div class="project-links">
-            <a href="https://github.com/kibetdennis4136" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </article>
+<div>
+<h2>About Guru Creations</h2>
+<p>
+I'm <b>Kibet Dennis</b>, founder of Guru Creations.
+I produce livestream broadcasts, photography, video content
+and modern websites for creators, events and businesses.
+</p>
+</div>
 
-        <!-- Example Project: Gallery -->
-        <article class="project-card" data-full="gallery">
-          <div class="thumb"><img src="Assets/Visual branding.webp" alt="Photography Gallery" /></div>
-          <h3>Photography Gallery Showcase</h3>
-          <p>Curated photo stories — street, portrait, and event photography compiled for quick client previews.</p>
-          <div class="project-links">
-            <a href="#">Preview</a>
-          </div>   
-        </article>
+</div>
+</section>
 
-        <!---camera operations-->
-        <article class="project-card">
-          <div class="thumb">
-            <img src="Assets/Camera image 2.jpeg" alt="Camera Operations Project" />
-          </div>
-          <h3>Camera Operations Projects</h3>
-          <p>Expertise in camera setups, live switching, and on-location production for various events.</p>
-          <div class="project-links">
-            <a href="https://github.com/yourusername/camera-operations" target="_blank">View Project</a>
-          </div>
-        </article>
 
-      <!---tech assistant-->
-      <article class="project-card">
-        <div class="thumb">
-          <img src="Assets/Social media marketing.webp" alt="Tech Assistant Project" />
-        </div>
-        <h3>Tech Assistant Projects</h3>
-        <p>AI-driven solutions for productivity and creativity — virtual assistants, chatbots, and more.</p>
-        <div class="project-links">
-          <a href="https://github.com/yourusername/tech-assistant" target="_blank">View Project</a>
-        </div>
-      </article>
+<section class="section reveal" id="services">
+<h2 class="title">Services</h2>
 
-      <!---media consaltancy-->
-      <article class="project-card">
-        <div class="thumb">
-          <img src="Assets/Graphic design image with headphones.webp" alt="Media Consultancy Project" />
-        </div>
-        <h3>Media Consultancy Projects</h3>
-        <p>Strategic media planning and consultancy for brands and creators to maximize their reach.</p>
-        <div class="project-links">
-          <a href="https://github.com/yourusername/media-consultancy" target="_blank">View Project</a>
-        </div>
-      </article>
+<div class="services">
+<div class="service">
+<h3>Photography</h3>
+<p>Professional wedding, event and portrait photography.</p>
+</div>
 
-      </div>  <!-- end .project-grid -->
-    </section> <!-- ADD: close the #projects section -->
-    
-     <!-- ✅ Gallery Section -->
-    <section class="container" id="gallery" aria-label="Gallery">
-      <h2 class="section-title">Gallery — Photos & Videos</h2>
-      <p class="muted">A showcase of my photography highlights and video productions.</p>
+<div class="service">
+<h3>Livestream Production</h3>
+<p>Multi-camera livestream production for churches and events.</p>
+</div>
 
-      <div class="project-grid">
-        <!-- Photo 1 -->
-        <article class="project-card">
-          <div class="thumb">
-            <img src="Assets/Hero section one.webp" alt="Wedding Photography" />
-          </div>
-          <h3>Wedding Moments</h3>
-          <p>Capturing love stories through timeless photography.</p>
-          <div class="project-links">
-            <a href="images/gallery-photo1.jpg" target="_blank">View Full</a>
-          </div>
-        </article>
+<div class="service">
+<h3>Video Production</h3>
+<p>Cinematic storytelling and video editing.</p>
+</div>
 
-        <!-- Photo 2 -->
-        <article class="project-card">
-          <div class="thumb">
-            <img src="Assets/Namuli new Img.jpg" alt="Event Photography" />
-          </div>
-          <h3>Event Highlights</h3>
-          <p>Energy-filled photos from live concerts and events.</p>
-          <div class="project-links">
-            <a href="images/gallery-photo2.jpg" target="_blank">View Full</a>
-          </div>
-        </article>
+<div class="service">
+<h3>Web Development</h3>
+<p>Modern responsive websites for creators and businesses.</p>
+</div>
+</div>
+</section>
 
-        <!-- Video 1 -->
-        <article class="project-card">
-          <div class="thumb">
-            <video src="Assets/video 1.mp4" muted loop autoplay playsinline></video>
-          </div>
-          <h3>Livestream Highlight</h3>
-          <p>A clip from one of my livestream productions.</p>
-          <div class="project-links">
-            <a href="videos/sample1.mp4" target="_blank">Watch Video</a>
-          </div>
-        </article>
-      </div> <!-- end .project-grid -->
-    </section>
-    
-    <!-- Contact -->
-    <section class="container" id="contact" aria-label="Contact">
-      <h2 class="section-title">Let’s collaborate</h2>
-      <p class="muted">I take on livestreams, event shoots, and web builds. Send a message or use the contact button in the corner.</p>
 
-      <div class="contact-links">
-        <a href="mailto:kibetdennis4136@gmail.com">Email</a>
-        <a href="tel:+254700545425">Call</a>
-        <a href="https://www.youtube.com/@gurucreationltd" target="_blank" rel="noopener">YouTube</a>
-      </div>
-    </section>
+<section class="stats reveal">
+<div class="stat">
+<h2 class="counter" data-target="120">0</h2>
+<p>Projects</p>
+</div>
 
-  <!-- Floating contact button -->
-  <button class="floating-contact" id="floatContact" title="Contact" aria-controls="modalBackdrop" aria-expanded="false" aria-label="Open contact dialog">✉️</button>
+<div class="stat">
+<h2 class="counter" data-target="80">0</h2>
+<p>Livestream Events</p>
+</div>
 
-  <!-- Contact Modal -->
-  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="contactModalTitle" aria-describedby="contactModalDesc">
-    <div class="modal" tabindex="-1">
-      <h3 id="contactModalTitle">Contact — Guru Creations</h3>
-      <p id="contactModalDesc" class="muted">Send a quick message or email <strong>kibetdennis4136@gmail.com</strong></p>
+<div class="stat">
+<h2 class="counter" data-target="20000">0</h2>
+<p>Video Views</p>
+</div>
+</section>
 
-      <div class="form-row"><input id="cf-name" type="text" placeholder="Your name" /></div>
-      <div class="form-row"><input id="cf-email" type="email" placeholder="Email" /></div>
-      <div class="form-row"><textarea id="cf-message" rows="4" placeholder="Message"></textarea></div>
 
-      <div class="actions">
-        <button id="cf-cancel" class="nav-link" aria-label="Cancel contact form">Cancel</button>
-        <button id="cf-send" class="button" aria-label="Send contact form">Send</button>
-      </div>
-    </div>
-  </div>
+<section class="section reveal" id="portfolio">
+<h2 class="title">Photography Portfolio</h2>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-hidden="true" aria-labelledby="lightboxTitle">
-    <div class="panel" tabindex="-1" role="document">
-      <div id="lightboxContent" aria-live="polite"></div>
-      <div style="margin-top:10px; text-align:right;">
-        <button id="lb-close" class="nav-link" aria-label="Close lightbox">Close</button>
-      </div>
-    </div>
-  </div> <!-- Footer -->
-    <footer class="footer">
-      <p>© 2025 Guru Creations • Designed by Kibet Dennis — Your Success, Our Passion</p>
-    </footer>
-  </main>
+<div class="gallery">
+<img src="Assets/photo1.jpg" class="gallery-item">
+<img src="Assets/photo2.jpg" class="gallery-item">
+<img src="Assets/photo3.jpg" class="gallery-item">
+<img src="Assets/photo4.jpg" class="gallery-item">
+</div>
+</section>
 
-  <!-- Link JS -->
-  <script src="JS/PORTFOLIO.js" defer></script>
+
+<section class="section reveal" id="videos">
+<h2 class="title">Video Productions</h2>
+
+<div class="video-grid">
+<iframe src="https://www.youtube.com/embed/T-dfroNBBCU"></iframe>
+<iframe src="https://www.youtube.com/embed/T-dfroNBBCU"></iframe>
+</div>
+</section>
+
+
+<section class="section reveal" id="booking">
+<h2 class="title">Book a Service</h2>
+
+<form class="booking-form">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Email Address" required>
+
+<select>
+<option>Select Service</option>
+<option>Photography</option>
+<option>Livestream Production</option>
+<option>Video Production</option>
+<option>Web Development</option>
+</select>
+
+<textarea placeholder="Project Details"></textarea>
+
+<button type="submit" class="btn">Send Request</button>
+</form>
+</section>
+
+
+<section class="section reveal">
+<h2 class="title">Payments</h2>
+<p>You can pay for services using:</p>
+
+<ul class="payments">
+<li>M-Pesa</li>
+<li>PayPal</li>
+<li>Bank Transfer</li>
+</ul>
+</section>
+
+
+<section class="section reveal" id="contact">
+<h2 class="title">Contact</h2>
+
+<p>Email: kibetdennis4136@gmail.com</p>
+<p>Phone: +254700545425</p>
+
+<a href="mailto:kibetdennis4136@gmail.com" class="btn">Send Email</a>
+</section>
+
+
+<footer>
+<p>© 2025 Guru Creations | Designed by Kibet Dennis</p>
+</footer>
+
+
+<div class="lightbox" id="lightbox">
+<img id="lightbox-img">
+</div>
+
+<a href="https://wa.me/254700545425" class="whatsapp">💬</a>
+
+<script src="JS/portfolio.js"></script>
+
 </body>
 </html>
