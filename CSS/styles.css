@@ -1176,6 +1176,12 @@ body {
   box-shadow: 0 5px 15px rgba(255, 123, 0, 0.4);
 }
 
+/* Smooth Filtering Transition */
+.project-item {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  will-change: opacity, transform;
+}
+
 /* Optional Add-Ons Sections */
 .optional-section {
   padding: 60px 0;

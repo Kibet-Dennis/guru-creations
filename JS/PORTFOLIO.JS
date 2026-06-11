@@ -1,78 +1,110 @@
-// typing animation
+// Portfolio Specific Logic
 
-const words = ["Livestreams","Photography","Videos","Websites"]
-let i = 0
+document.addEventListener("DOMContentLoaded", function () {
+  // 1. Typing Animation
+  const words = ["Websites", "Photography", "Branding", "Cinematography"];
+  let i = 0;
+  const typingSpan = document.getElementById("typing");
+  
+  if (typingSpan) {
+    setInterval(() => {
+      typingSpan.style.opacity = 0;
+      setTimeout(() => {
+        typingSpan.innerText = words[i];
+        typingSpan.style.opacity = 1;
+        i = (i + 1) % words.length;
+      }, 500);
+    }, 2500);
+  }
 
-setInterval(()=>{
-document.getElementById("typing").innerText = words[i]
-i = (i+1) % words.length
-},2000)
+  // 2. Project Filtering Logic
+  const filterButtons = document.querySelectorAll(".filter-buttons .btn");
+  const projectItems = document.querySelectorAll(".project-item");
 
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Update active button
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      this.classList.add("active");
 
-// lightbox
+      const filterValue = this.getAttribute("data-filter");
 
-const images = document.querySelectorAll(".gallery-item")
-const lightbox = document.getElementById("lightbox")
-const lightboxImg = document.getElementById("lightbox-img")
+      projectItems.forEach((item) => {
+        item.style.opacity = "0";
+        item.style.transform = "scale(0.8)";
+        
+        setTimeout(() => {
+          if (filterValue === "all" || item.classList.contains(filterValue)) {
+            item.style.display = "block";
+            setTimeout(() => {
+              item.style.opacity = "1";
+              item.style.transform = "scale(1)";
+            }, 50);
+          } else {
+            item.style.display = "none";
+          }
+        }, 400);
+      });
+    });
+  });
 
-images.forEach(img=>{
-img.onclick = () => {
-lightbox.style.display="flex"
-lightboxImg.src = img.src
-}
-})
+  // Apply filter if URL hash present (e.g., #web-design)
+  const hash = window.location.hash.replace('#', '');
+  if (hash) {
+    const targetBtn = Array.from(filterButtons).find(b => b.getAttribute('data-filter') === hash);
+    if (targetBtn) {
+      targetBtn.click();
+      // scroll to grid
+      const grid = document.getElementById('project-grid');
+      if (grid) grid.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
-lightbox.onclick=()=>{
-lightbox.style.display="none"
-}
+  // 3. Modal Case Study Population
+  const projectModal = document.getElementById("projectModal");
+  if (projectModal) {
+    projectModal.addEventListener("show.bs.modal", (event) => {
+      const button = event.relatedTarget;
+      const title = button.getAttribute("data-title");
+      const category = button.getAttribute("data-category");
+      const image = button.getAttribute("data-image");
+      const description = button.getAttribute("data-description");
 
+      projectModal.querySelector("#modalProjectTitle").textContent = title;
+      projectModal.querySelector("#modalProjectCategory").textContent = category;
+      projectModal.querySelector("#modalProjectImage").src = image;
+      projectModal.querySelector("#modalProjectDescription").textContent = description;
+    });
+  }
 
-// counter animation
+  // 4. Stats Counter Animation
+  const counters = document.querySelectorAll(".number");
+  const speed = 200;
 
-const counters = document.querySelectorAll('.counter')
+  const animateCounters = () => {
+    counters.forEach((counter) => {
+      const target = +counter.getAttribute("data-target");
+      const count = +counter.innerText;
+      const inc = target / speed;
 
-counters.forEach(counter => {
+      if (count < target) {
+        counter.innerText = Math.ceil(count + inc);
+        setTimeout(animateCounters, 10);
+      } else {
+        counter.innerText = target;
+      }
+    });
+  };
 
-counter.innerText = '0'
-
-const update = () => {
-
-const target = +counter.getAttribute('data-target')
-const c = +counter.innerText
-const increment = target / 200
-
-if(c < target){
-counter.innerText = Math.ceil(c + increment)
-setTimeout(update,10)
-}else{
-counter.innerText = target
-}
-
-}
-
-update()
-
-})
-
-
-// scroll reveal animation
-
-function reveal(){
-
-const reveals = document.querySelectorAll(".reveal")
-
-for(let i=0;i<reveals.length;i++){
-
-let windowHeight = window.innerHeight
-let revealTop = reveals[i].getBoundingClientRect().top
-let revealPoint = 100
-
-if(revealTop < windowHeight - revealPoint){
-reveals[i].classList.add("active")
-}
-
-}
-
-}
-
-window.addEventListener("scroll", reveal)
+  // Simple trigger for counters when section is in view
+  const statsSection = document.querySelector(".stats-counter");
+  if (statsSection) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        animateCounters();
+        observer.disconnect();
+      }
+    }, { threshold: 0.5 });
+    observer.observe(statsSection);
+  }
+});
