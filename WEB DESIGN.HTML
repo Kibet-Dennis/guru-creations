@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guru Creations | Web Design Studio</title>
+    <meta
+      name="description"
+      content="Guru Creations creates premium, responsive websites that help businesses attract customers and grow online."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0b1020;
+        --bg-soft: #111a2d;
+        --panel: rgba(17, 24, 39, 0.85);
+        --panel-strong: #101827;
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #edf3ff;
+        --muted: #a7b2c9;
+        --primary: #7c6cff;
+        --primary-2: #38bdf8;
+        --accent: #34d399;
+        --glow: rgba(124, 108, 255, 0.42);
+        --shadow: 0 30px 60px rgba(15, 23, 42, 0.45);
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(124, 108, 255, 0.28), transparent 28%),
+          radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.24), transparent 30%),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a { text-decoration: none; color: inherit; }
+      img { max-width: 100%; display: block; }
+
+      .container {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(11, 16, 32, 0.7);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 78px;
+        gap: 20px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+        box-shadow: 0 14px 35px var(--glow);
+        font-size: 1.1rem;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .nav-links a:hover { color: var(--text); }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 14px 24px;
+        font-weight: 600;
+        transition: 0.2s ease;
+        border: 1px solid transparent;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+        color: #fff;
+        box-shadow: 0 15px 30px rgba(124, 108, 255, 0.35);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 22px 36px rgba(124, 108, 255, 0.42);
+      }
+
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: var(--line);
+        color: var(--text);
+      }
+
+      .hero {
+        padding: 88px 0 56px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(124, 108, 255, 0.12);
+        border: 1px solid rgba(124, 108, 255, 0.25);
+        color: #d8d2ff;
+        font-weight: 600;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 18px 0 18px;
+        font-size: clamp(2.7rem, 5vw, 5rem);
+        line-height: 1.04;
+        letter-spacing: -0.06em;
+      }
+
+      .lead {
+        margin: 0 0 24px;
+        max-width: 620px;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+
+      .mini-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .mini-stats li {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        color: var(--muted);
+      }
+
+      .mini-stats strong {
+        color: var(--text);
+        font-size: 1.4rem;
+        font-weight: 800;
+      }
+
+      .hero-visual {
+        position: relative;
+        min-height: 560px;
+      }
+
+      .main-window {
+        position: relative;
+        padding: 22px;
+        background: linear-gradient(180deg, rgba(17, 24, 39, 0.9), rgba(15, 23, 42, 0.8));
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        box-shadow: var(--shadow);
+      }
+
+      .window-bar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 18px;
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .dot.red { background: #ff7676; }
+      .dot.yellow { background: #fbbf24; }
+      .dot.green { background: #34d399; }
+
+      .device-preview {
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: linear-gradient(135deg, rgba(124, 108, 255, 0.2), rgba(56, 189, 248, 0.1));
+      }
+
+      .device-preview img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+      }
+
+      .floating-card {
+        position: absolute;
+        bottom: 28px;
+        left: -28px;
+        width: min(260px, 55%);
+        padding: 18px 18px 16px;
+        background: rgba(17, 24, 39, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+      }
+
+      .floating-card small {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+
+      .score-box {
+        margin-top: 12px;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        color: var(--text);
+      }
+
+      .score-box strong {
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .score-box span {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .section {
+        padding: 90px 0;
+      }
+
+      .section-head {
+        max-width: 640px;
+        margin: 0 auto 42px;
+        text-align: center;
+      }
+
+      .section-head h2 {
+        margin: 0 0 14px;
+        font-size: clamp(2rem, 3vw, 3rem);
+        letter-spacing: -0.05em;
+      }
+
+      .section-head p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .service-card {
+        position: relative;
+        padding: 28px 22px;
+        background: rgba(15, 23, 42, 0.7);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        transition: 0.2s ease;
+      }
+
+      .service-card:hover {
+        border-color: rgba(124, 108, 255, 0.5);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(1, 8, 18, 0.42);
+      }
+
+      .service-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, rgba(124, 108, 255, 0.26), rgba(56, 189, 248, 0.18));
+        color: #fff;
+        font-size: 1.4rem;
+        margin-bottom: 18px;
+      }
+
+      .service-card h3 {
+        margin: 0 0 10px;
+        font-size: 1.44rem;
+      }
+
+      .service-card p {
+        margin: 0 0 18px;
+        color: var(--muted);
+      }
+
+      .service-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 9px;
+        color: #dfe9ff;
+        font-size: 0.95rem;
+      }
+
+      .service-card li::before {
+        content: "•";
+        color: var(--accent);
+        margin-right: 10px;
+      }
+
+      .showcase {
+        background: rgba(9, 14, 27, 0.7);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .showcase-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .project-panel {
+        padding: 24px;
+        background: rgba(17, 24, 39, 0.9);
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        box-shadow: var(--shadow);
+      }
+
+      .project-image {
+        overflow: hidden;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+      }
+
+      .project-details {
+        padding: 8px 0;
+      }
+
+      .project-tag {
+        display: inline-block;
+        margin-bottom: 12px;
+        color: var(--primary-2);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-weight: 700;
+      }
+
+      .project-details h3 {
+        margin: 0 0 12px;
+        font-size: 2rem;
+      }
+
+      .project-details p {
+        margin: 0 0 18px;
+        color: var(--muted);
+      }
+
+      .meta-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin: 0 0 18px;
+        padding: 0;
+        list-style: none;
+        color: #dfe9ff;
+        font-size: 0.95rem;
+      }
+
+      .meta-list li {
+        padding: 8px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+      }
+
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .step {
+        position: relative;
+        padding: 28px 22px;
+        background: rgba(15, 23, 42, 0.7);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+      }
+
+      .step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, rgba(124, 108, 255, 0.22), rgba(56, 189, 248, 0.18));
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 16px;
+      }
+
+      .step h3 {
+        margin: 0 0 8px;
+      }
+
+      .step p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .pricing-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .price-card {
+        padding: 28px 22px;
+        border-radius: 24px;
+        background: rgba(15, 23, 42, 0.72);
+        border: 1px solid var(--line);
+      }
+
+      .price-card.featured {
+        border-color: rgba(124, 108, 255, 0.6);
+        background: linear-gradient(180deg, rgba(96, 81, 202, 0.18), rgba(15, 23, 42, 0.82));
+        box-shadow: 0 25px 50px rgba(124, 108, 255, 0.18);
+      }
+
+      .pill {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: rgba(52, 211, 153, 0.18);
+        color: #c8f8df;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .price-card h3 {
+        margin: 0 0 12px;
+        font-size: 1.5rem;
+      }
+
+      .price {
+        display: flex;
+        align-items: end;
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+
+      .price strong {
+        font-size: 2.8rem;
+        letter-spacing: -0.06em;
+        line-height: 1;
+      }
+
+      .price span {
+        color: var(--muted);
+      }
+
+      .price-card p {
+        color: var(--muted);
+        margin-bottom: 18px;
+      }
+
+      .included {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 22px;
+        display: grid;
+        gap: 10px;
+        color: #e3ebff;
+      }
+
+      .included li::before {
+        content: "✓";
+        color: var(--accent);
+        margin-right: 10px;
+      }
+
+      .testimonial-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .testimonial {
+        padding: 28px 22px;
+        border-radius: 24px;
+        background: rgba(15, 23, 42, 0.72);
+        border: 1px solid var(--line);
+      }
+
+      .stars {
+        color: #fbbf24;
+        letter-spacing: 0.18em;
+        margin-bottom: 12px;
+      }
+
+      .testimonial p {
+        margin: 0 0 20px;
+        color: #e7efff;
+      }
+
+      .person {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .person .avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+      }
+
+      .person small {
+        display: block;
+        color: var(--muted);
+      }
+
+      .cta {
+        padding: 80px 0 90px;
+      }
+
+      .cta-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 30px 32px;
+        border-radius: 28px;
+        background: linear-gradient(135deg, rgba(124, 108, 255, 0.22), rgba(56, 189, 248, 0.12));
+        border: 1px solid rgba(124, 108, 255, 0.35);
+        box-shadow: var(--shadow);
+      }
+
+      .cta-box h3 {
+        margin: 0 0 6px;
+        font-size: clamp(1.7rem, 3vw, 2.5rem);
+        letter-spacing: -0.05em;
+      }
+
+      .cta-box p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .site-footer {
+        padding: 24px 0 36px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      @media (max-width: 960px) {
+        .hero-grid,
+        .showcase-grid,
+        .services-grid,
+        .process-grid,
+        .pricing-wrap,
+        .testimonial-wrap {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .hero-grid,
+        .showcase-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav-links {
+          display: none;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .services-grid,
+        .process-grid,
+        .pricing-wrap,
+        .testimonial-wrap {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-box,
+        .footer-inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .hero {
+          padding-top: 70px;
+        }
+
+        .floating-card {
+          position: static;
+          width: 100%;
+          margin-top: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="brand" aria-label="Guru Creations home">
+          <span class="brand-mark">G</span>
+          <span>Guru Creations</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="#services">Services</a>
+          <a href="PORTFOLIO.HTML">Portfolio</a>
+          <a href="WEB DESIGN.HTML">Web Design</a>
+          <a href="blog1.html">Blog</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <a class="btn btn-primary" href="mailto:gurucreations@gmail.com">Book a call</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">Custom web design studio</span>
+            <h1>Websites that turn attention into action.</h1>
+            <p class="lead">
+              We design elegant, conversion-focused websites for brands that want to lead online,
+              impress customers, and grow faster with a strong digital presence.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Get a free quote</a>
+              <a class="btn btn-secondary" href="PORTFOLIO.HTML">View our work</a>
+            </div>
+
+            <ul class="mini-stats">
+              <li><strong>48+</strong> brands launched</li>
+              <li><strong>6 weeks</strong> average launch time</li>
+              <li><strong>4.9/5</strong> client satisfaction</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Web design preview">
+            <div class="main-window">
+              <div class="window-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+
+              <div class="device-preview">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+                  alt="Modern website dashboard"
+                />
+              </div>
+            </div>
+
+            <div class="floating-card">
+              <small>Conversion growth</small>
+              <div class="score-box">
+                <strong>+186%</strong>
+                <span>↑ 3.4x</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-head">
+            <h2>Everything your brand needs to win online</h2>
+            <p>
+              From strategy and design to coding and launch, we craft high-impact websites that
+              look premium and perform under pressure.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-icon">✦</div>
+              <h3>Brand-focused design</h3>
+              <p>
+                Visually compelling websites aligned with your positioning, audience, and goals.
+              </p>
+              <ul>
+                <li>Positioning-first messaging</li>
+                <li>Modern UI direction</li>
+                <li>Conversion-ready layouts</li>
+              </ul>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">▣</div>
+              <h3>Responsive builds</h3>
+              <p>
+                Mobile-friendly experiences that stay smooth, fast, and beautiful across every screen.
+              </p>
+              <ul>
+                <li>Mobile-first interfaces</li>
+                <li>Fast-loading pages</li>
+                <li>Cross-device consistency</li>
+              </ul>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">⚡</div>
+              <h3>Launch & growth</h3>
+              <p>
+                We do more than build—we help turn traffic into trust, leads, and loyal customers.
+              </p>
+              <ul>
+                <li>SEO-friendly structure</li>
+                <li>Lead capture optimization</li>
+                <li>Analytics & reporting</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section showcase">
+        <div class="container showcase-grid">
+          <div class="project-panel">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+                alt="Creative digital agency workspace"
+              />
+            </div>
+          </div>
+
+          <div class="project-details">
+            <span class="project-tag">Featured project</span>
+            <h3>Luxury brand website redesign</h3>
+            <p>
+              We transformed a dated service website into a premium digital experience that elevated
+              the business narrative and increased inquiries from qualified clients.
+            </p>
+
+            <ul class="meta-list">
+              <li>Brand strategy</li>
+              <li>UX/UI design</li>
+              <li>Website build</li>
+            </ul>
+
+            <a class="btn btn-primary" href="PORTFOLIO.HTML">Explore portfolio</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Our streamlined design process</h2>
+            <p>
+              Every project is guided by clarity, creativity, and measurable growth goals.
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <div class="step">
+              <div class="step-number">01</div>
+              <h3>Discover</h3>
+              <p>We learn your goals, audience, and market position before creating anything.</p>
+            </div>
+
+            <div class="step">
+              <div class="step-number">02</div>
+              <h3>Design</h3>
+              <p>We shape the visual story, structure, and flow of the website experience.</p>
+            </div>
+
+            <div class="step">
+              <div class="step-number">03</div>
+              <h3>Build</h3>
+              <p>We translate the design into a responsive, fast, and conversion-focused site.</p>
+            </div>
+
+            <div class="step">
+              <div class="step-number">04</div>
+              <h3>Launch</h3>
+              <p>We test, refine, and deploy your website for ongoing growth and momentum.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Simple pricing, premium value</h2>
+            <p>Flexible website packages designed for startups, service brands, and growing businesses.</p>
+          </div>
+
+          <div class="pricing-wrap">
+            <div class="price-card">
+              <span class="pill">Starter</span>
+              <h3>Launch Website</h3>
+              <div class="price"><strong>$499</strong><span>/ project</span></div>
+              <p>For businesses that need a clean, effective online presence.</p>
+              <ul class="included">
+                <li>Up to 5 pages</li>
+                <li>Mobile responsive design</li>
+                <li>Basic SEO setup</li>
+                <li>Contact form integration</li>
+              </ul>
+              <a class="btn btn-secondary" href="#contact">Choose plan</a>
+            </div>
+
+            <div class="price-card featured">
+              <span class="pill">Most popular</span>
+              <h3>Growth Website</h3>
+              <div class="price"><strong>$999</strong><span>/ project</span></div>
+              <p>For brands ready to impress, convert, and scale with confidence.</p>
+              <ul class="included">
+                <li>Custom design system</li>
+                <li>Advanced page structure</li>
+                <li>Conversion optimization</li>
+                <li>Priority support</li>
+              </ul>
+              <a class="btn btn-primary" href="#contact">Choose plan</a>
+            </div>
+
+            <div class="price-card">
+              <span class="pill">Premium</span>
+              <h3>Brand Experience</h3>
+              <div class="price"><strong>$1,799</strong><span>/ project</span></div>
+              <p>For businesses seeking a high-end website and strategic positioning.</p>
+              <ul class="included">
+                <li>Full brand storytelling</li>
+                <li>Advanced user journeys</li>
+                <li>Custom functionality</li>
+                <li>Launch support</li>
+              </ul>
+              <a class="btn btn-secondary" href="#contact">Choose plan</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>What our clients say</h2>
+            <p>Trusted by businesses that wanted a stronger digital presence and clearer brand identity.</p>
+          </div>
+
+          <div class="testimonial-wrap">
+            <article class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p>
+                “Guru Creations built a website that finally reflects the quality of our work. The
+                design feels premium, and we immediately saw better inquiry quality.”
+              </p>
+              <div class="person">
+                <div class="avatar">AS</div>
+                <div>
+                  <strong>Alicia Stone</strong>
+                  <small>Founder, Studio North</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p>
+                “Our previous website looked outdated and underperformed. The new experience is clear,
+                elegant, and much more effective for turning visitors into leads.”
+              </p>
+              <div class="person">
+                <div class="avatar">DK</div>
+                <div>
+                  <strong>Daniel King</strong>
+                  <small>CEO, Peak Advisory</small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="contact">
+        <div class="container">
+          <div class="cta-box">
+            <div>
+              <h3>Ready to build a website that works as hard as you do?</h3>
+              <p>Let’s craft a digital experience your audience remembers.</p>
+            </div>
+            <a class="btn btn-primary" href="mailto:gurucreations@gmail.com">Start your project</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© 2025 Guru Creations. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="PORTFOLIO.HTML">Portfolio</a>
+          <a href="blog1.html">Blog</a>
+          <a href="mailto:gurucreations@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
