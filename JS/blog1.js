@@ -41,11 +41,13 @@ function functionUrl(name) {
 
 function backendHeaders() {
   return {
-    apikey: blogConfig.supabaseAnonKey,
-    Authorization: `Bearer ${blogConfig.supabaseAnonKey}`,
+    apikey: blogConfig.supabaseAnonKey || "",
+    Authorization: `Bearer ${blogConfig.supabaseAnonKey || ""}`,
     "Content-Type": "application/json"
   };
 }
+
+const moderation = window.BLOG_MODERATION || { containsBlockedLanguage: () => false };
 
 function setSubmissionMessage(message, state = "error") {
   submissionStatus.textContent = message;
@@ -96,7 +98,7 @@ function updateMediaSelection() {
 function updateSubmissionAvailability(mediaError = validateSelectedMedia(selectedMedia())) {
   let containsBlockedLanguage = false;
   submissionTextInputs.forEach((input) => {
-    const blocked = window.BLOG_MODERATION.containsBlockedLanguage(input.value);
+    const blocked = moderation.containsBlockedLanguage(input.value);
     input.setAttribute("aria-invalid", String(blocked));
     containsBlockedLanguage ||= blocked;
   });
@@ -310,7 +312,7 @@ async function getMpesaQuote(plan) {
 async function startSubmission(event) {
   event.preventDefault();
   const textContainsBlockedLanguage = submissionTextInputs.some((input) =>
-    window.BLOG_MODERATION.containsBlockedLanguage(input.value)
+    moderation.containsBlockedLanguage(input.value)
   );
   if (textContainsBlockedLanguage) {
     updateSubmissionAvailability();
