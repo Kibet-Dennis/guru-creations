@@ -3,891 +3,241 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Guru Creations</title>
-    <meta
-      name="description"
-      content="Explore standout digital work from Guru Creations including branding, web design, videography, and campaign growth projects."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <title>Our Portfolio | Guru Creations Media</title>
+    <meta name="description" content="Explore the creative works of Guru Creations Media - from cinematic videography to professional branding and web design." />
+    
+    <!-- Favicon -->
     <link rel="icon" href="Assets/logo-1.png" type="image/x-icon" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <!-- AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    
     <style>
-      :root {
-        --bg: #081120;
-        --bg-soft: #101b2e;
-        --panel: rgba(18, 26, 43, 0.88);
-        --panel-strong: #0d1729;
-        --line: rgba(255, 255, 255, 0.12);
-        --text: #edf4ff;
-        --muted: #a9bad3;
-        --primary: #7c6cff;
-        --primary-2: #38bdf8;
-        --accent: #34d399;
-        --gold: #fbbf24;
-        --shadow: 0 25px 60px rgba(3, 8, 18, 0.4);
-      }
-
-      * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
-      body {
-        margin: 0;
-        font-family: "Inter", sans-serif;
-        background:
-          radial-gradient(circle at top left, rgba(124, 108, 255, 0.22), transparent 28%),
-          radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.18), transparent 24%),
-          var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-      }
-
-      a { text-decoration: none; color: inherit; }
-      img { max-width: 100%; display: block; }
-      button { font: inherit; }
-
-      .container {
-        width: min(1180px, calc(100% - 32px));
-        margin: 0 auto;
-      }
-
-      .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: rgba(8, 17, 32, 0.7);
-        backdrop-filter: blur(18px);
-        border-bottom: 1px solid var(--line);
-      }
-
-      .nav {
-        min-height: 78px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 18px;
-      }
-
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        font-weight: 700;
-        font-size: 1.05rem;
-        letter-spacing: 0.02em;
-      }
-
-      .brand-mark {
-        width: 38px;
-        height: 38px;
-        display: grid;
-        place-items: center;
-        border-radius: 12px;
-        background: linear-gradient(135deg, var(--primary), var(--primary-2));
-        box-shadow: 0 14px 32px rgba(124, 108, 255, 0.42);
-        font-weight: 800;
-      }
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-        font-size: 0.95rem;
-        color: var(--muted);
-      }
-
-      .nav-links a:hover { color: var(--text); }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 999px;
-        padding: 13px 22px;
-        border: 1px solid transparent;
-        cursor: pointer;
-        transition: 0.2s ease;
-      }
-
-      .btn-primary {
-        background: linear-gradient(135deg, var(--primary), var(--primary-2));
-        color: white;
-        box-shadow: 0 16px 30px rgba(124, 108, 255, 0.28);
-      }
-
-      .btn-primary:hover { transform: translateY(-1px); }
-
-      .btn-secondary {
-        background: rgba(255, 255, 255, 0.03);
-        border-color: var(--line);
-        color: var(--text);
-      }
-
-      .hero {
-        padding: 96px 0 84px;
-      }
-
-      .hero-shell {
-        display: grid;
-        grid-template-columns: 1.05fr 0.95fr;
-        gap: 42px;
-        align-items: center;
-      }
-
-      .eyebrow {
-        display: inline-block;
-        padding: 8px 14px;
-        border-radius: 999px;
-        background: rgba(124, 108, 255, 0.12);
-        border: 1px solid rgba(124, 108, 255, 0.25);
-        color: #dad2ff;
-        font-weight: 600;
-        font-size: 0.76rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        margin: 18px 0 18px;
-        font-size: clamp(2.7rem, 5vw, 5.1rem);
-        line-height: 0.96;
-        letter-spacing: -0.07em;
-      }
-
-      .hero-sub {
-        margin: 0 0 28px;
-        max-width: 620px;
-        color: var(--muted);
-        font-size: 1.08rem;
-      }
-
-      .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin-bottom: 30px;
-      }
-
-      .metrics {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 26px;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .metrics li {
-        min-width: 120px;
-      }
-
-      .metrics strong {
-        display: block;
-        font-size: clamp(1.6rem, 2vw, 2.3rem);
-        line-height: 1.1;
-        margin-bottom: 4px;
-      }
-
-      .metrics span {
-        color: var(--muted);
-      }
-
-      .hero-visual {
-        position: relative;
-        min-height: 560px;
-      }
-
-      .visual-card {
-        position: relative;
-        z-index: 1;
-        padding: 22px;
-        border-radius: 28px;
-        background: linear-gradient(180deg, rgba(13, 23, 41, 0.95), rgba(11, 18, 30, 0.9));
-        border: 1px solid var(--line);
-        box-shadow: var(--shadow);
-      }
-
-      .window-bar {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 16px;
-      }
-
-      .dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        display: inline-block;
-      }
-
-      .dot.red { background: #ff6961; }
-      .dot.yellow { background: #f6c76f; }
-      .dot.green { background: #5fe4a5; }
-
-      .showcase-image {
-        overflow: hidden;
-        border-radius: 22px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .showcase-image img {
-        width: 100%;
-        height: 410px;
-        object-fit: cover;
-      }
-
-      .floating-card {
-        position: absolute;
-        right: -18px;
-        bottom: 18px;
-        width: min(290px, 62%);
-        padding: 20px 18px 18px;
-        border-radius: 20px;
-        background: rgba(17, 26, 40, 0.9);
-        border: 1px solid var(--line);
-        box-shadow: var(--shadow);
-      }
-
-      .floating-card small {
-        display: block;
-        color: var(--muted);
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        margin-bottom: 10px;
-      }
-
-      .ratio {
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        gap: 12px;
-      }
-
-      .ratio strong {
-        font-size: 2.3rem;
-        letter-spacing: -0.06em;
-      }
-
-      .ratio span {
-        color: var(--accent);
-        font-weight: 700;
-      }
-
-      .section {
-        padding: 90px 0;
-      }
-
-      .section-head {
-        max-width: 700px;
-        margin: 0 auto 42px;
+      .portfolio-hero {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./Assets/hero-bg.jpg'); /* Ensure you have a relevant bg image */
+        background-size: cover;
+        background-position: center;
+        padding: 150px 0 100px;
         text-align: center;
+        color: white;
       }
-
-      .section-head h2 {
-        margin: 0 0 14px;
-        font-size: clamp(2.2rem, 3vw, 3.2rem);
-        letter-spacing: -0.06em;
+      .typing-cursor {
+        border-right: 3px solid var(--guru-orange);
+        animation: blink 0.7s infinite;
       }
-
-      .section-head p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      .filter-bar {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 34px;
-      }
-
-      .filter {
-        padding: 10px 16px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        background: transparent;
-        color: var(--muted);
-        font-weight: 600;
-        cursor: pointer;
-        transition: 0.2s ease;
-      }
-
-      .filter.active,
-      .filter:hover {
-        background: rgba(124, 108, 255, 0.12);
-        color: var(--text);
-        border-color: rgba(124, 108, 255, 0.26);
-      }
-
-      .projects {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 28px;
-      }
-
-      .project-card {
-        overflow: hidden;
-        border-radius: 24px;
-        background: rgba(15, 23, 42, 0.8);
-        border: 1px solid var(--line);
-        transition: 0.25s ease;
-      }
-
-      .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow);
-      }
-
-      .project-image {
-        overflow: hidden;
-      }
-
-      .project-image img {
-        width: 100%;
-        height: 260px;
-        object-fit: cover;
-      }
-
-      .project-body {
-        padding: 22px 20px 20px;
-      }
-
-      .tag {
-        display: inline-block;
-        margin-bottom: 10px;
-        font-size: 0.72rem;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        color: var(--primary-2);
-        font-weight: 700;
-      }
-
-      .project-body h3 {
-        margin: 0 0 10px;
-        font-size: 1.45rem;
-      }
-
-      .project-body p {
-        margin: 0 0 18px;
-        color: var(--muted);
-      }
-
-      .project-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        color: var(--text);
-        font-weight: 600;
-      }
-
-      .feature-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 24px;
-      }
-
-      .feature {
-        padding: 28px 22px;
-        border-radius: 24px;
-        background: rgba(15, 23, 42, 0.72);
-        border: 1px solid var(--line);
-      }
-
-      .feature-icon {
-        width: 56px;
-        height: 56px;
-        display: grid;
-        place-items: center;
-        border-radius: 16px;
-        background: linear-gradient(135deg, rgba(124, 108, 255, 0.26), rgba(56, 189, 248, 0.2));
-        font-size: 1.3rem;
-        margin-bottom: 18px;
-      }
-
-      .feature h3 {
-        margin: 0 0 10px;
-      }
-
-      .feature p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      .process-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 22px;
-      }
-
-      .step {
-        padding: 26px 20px;
-        border-radius: 24px;
-        background: rgba(15, 23, 42, 0.72);
-        border: 1px solid var(--line);
-      }
-
-      .step-number {
-        width: 46px;
-        height: 46px;
-        display: grid;
-        place-items: center;
-        border-radius: 14px;
-        margin-bottom: 16px;
-        background: linear-gradient(135deg, rgba(124, 108, 255, 0.24), rgba(56, 189, 248, 0.18));
-        font-weight: 800;
-      }
-
-      .step h3 {
-        margin: 0 0 8px;
-      }
-
-      .step p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      .testimonial-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px;
-      }
-
-      .testimonial {
-        padding: 28px 22px;
-        border-radius: 24px;
-        background: rgba(15, 23, 42, 0.72);
-        border: 1px solid var(--line);
-      }
-
-      .stars {
-        color: var(--gold);
-        letter-spacing: 0.18em;
-        margin-bottom: 14px;
-      }
-
-      .testimonial p {
-        margin: 0 0 18px;
-        color: #edf4ff;
-      }
-
-      .person {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .avatar {
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        background: linear-gradient(135deg, var(--primary), var(--primary-2));
-        font-weight: 700;
-      }
-
-      .person small {
-        display: block;
-        color: var(--muted);
-      }
-
-      .cta {
-        padding: 36px 0 90px;
-      }
-
-      .cta-box {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        padding: 30px 32px;
-        border-radius: 28px;
-        background: linear-gradient(135deg, rgba(124, 108, 255, 0.2), rgba(56, 189, 248, 0.12));
-        border: 1px solid rgba(124, 108, 255, 0.28);
-        box-shadow: var(--shadow);
-      }
-
-      .cta-box h3 {
-        margin: 0 0 6px;
-        font-size: clamp(1.8rem, 3vw, 2.8rem);
-        letter-spacing: -0.05em;
-      }
-
-      .cta-box p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      .site-footer {
-        padding: 26px 0 32px;
-        border-top: 1px solid var(--line);
-        color: var(--muted);
-      }
-
-      .footer-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 18px;
-      }
-
-      .footer-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 18px;
-      }
-
-      @media (max-width: 980px) {
-        .hero-shell,
-        .projects,
-        .feature-grid,
-        .process-grid,
-        .testimonial-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-
-        .hero-shell {
-          grid-template-columns: 1fr;
-        }
-
-        .nav-links {
-          display: none;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .projects,
-        .feature-grid,
-        .process-grid,
-        .testimonial-grid,
-        .cta-box,
-        .footer-inner {
-          grid-template-columns: 1fr;
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .hero {
-          padding-top: 80px;
-        }
-
-        .floating-card {
-          position: static;
-          width: 100%;
-          margin-top: 16px;
-        }
-      }
+      @keyframes blink { 50% { border-color: transparent; } }
     </style>
   </head>
+
   <body>
-    <header class="site-header">
-      <div class="container nav">
-        <a href="index.html" class="brand" aria-label="Guru Creations home">
-          <span class="brand-mark">G</span>
-          <span>Guru Creations</span>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="Assets/logo-1.png" alt="Logo" width="35" height="35" class="me-2" />
+          <span class="brand-name">Guru Creations</span>
         </a>
+        <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog1.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="index.html">Home</a>
-          <a href="index.html#about">About</a>
-          <a href="index.html#services">Services</a>
-          <a href="PORTFOLIO.HTML">Portfolio</a>
-          <a href="WEB DESIGN.HTML">Web Design</a>
-          <a href="blog1.html">Blog</a>
-          <a href="index.html#contact">Contact</a>
-        </nav>
-
-        <a href="mailto:gurucreations@gmail.com" class="btn btn-primary">Book a call</a>
+    <!-- Hero Section -->
+    <header class="portfolio-hero">
+      <div class="container">
+        <h1 class="display-3 fw-bold mb-3" data-aos="fade-down">We Create <span id="typing" class="gradient-text"></span><span class="typing-cursor"></span></h1>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">A showcase of our best work in digital media, branding, and storytelling.</p>
       </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-shell">
-          <div>
-            <span class="eyebrow">Selected work</span>
-            <h1>Bold ideas. Beautiful execution.</h1>
-            <p class="hero-sub">
-              We build elevated digital experiences for brands that want to stand out, convert more,
-              and turn attention into long-term trust.
-            </p>
+    <!-- Portfolio Grid Section -->
+    <main class="py-5">
+      <div class="container">
+        <!-- Filters -->
+        <section class="filter-buttons mb-5" data-aos="fade-up">
+          <button type="button" class="btn active" data-filter="all">All</button>
+          <button type="button" class="btn" data-filter="web-design">Web Design</button>
+          <button type="button" class="btn" data-filter="branding">Branding</button>
+          <button type="button" class="btn" data-filter="livestream">Livestream</button>
+          <button type="button" class="btn" data-filter="photography">Photography</button>
+          <button type="button" class="btn" data-filter="videography">Videography</button>
+        </section>
 
-            <div class="hero-actions">
-              <a href="#work" class="btn btn-primary">View projects</a>
-              <a href="mailto:gurucreations@gmail.com" class="btn btn-secondary">Start a project</a>
-            </div>
-
-            <ul class="metrics">
-              <li><strong>150+</strong><span>Projects</span></li>
-              <li><strong>95%</strong><span>Repeat clients</span></li>
-              <li><strong>5 yrs</strong><span>Experience</span></li>
-            </ul>
-          </div>
-
-          <div class="hero-visual" aria-label="Project preview">
-            <div class="visual-card">
-              <div class="window-bar">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-              </div>
-
-              <div class="showcase-image">
-                <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
-                  alt="Creative studio workspace"
-                />
-              </div>
-            </div>
-
-            <div class="floating-card">
-              <small>Campaign lift</small>
-              <div class="ratio">
-                <strong>+186%</strong>
-                <span>↑ 3.4x</span>
+        <!-- Grid -->
+        <div class="row g-4" id="project-grid">
+          <!-- Project Card 1 -->
+          <div class="col-md-6 col-lg-4 project-item web-design" data-aos="zoom-in">
+            <div class="project-card">
+              <img src="./Assets/featured-products/website-photo.jpg" alt="Web Project" />
+              <div class="card-body">
+                <span class="category-tag">Web Design</span>
+                <h5 class="card-title">Real Estate Platform</h5>
+                <p class="card-text">Modern property listing site with virtual tours.</p>
+                <button class="btn btn-view-case-study" data-bs-toggle="modal" data-bs-target="#projectModal" 
+                        data-title="Real Estate Platform" data-category="Web Design" 
+                        data-image="./Assets/featured-products/website-photo.jpg"
+                        data-description="A full-stack solution for luxury real estate, featuring interactive maps and high-res galleries.">View Details</button>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="section" id="work">
-        <div class="container">
-          <div class="section-head">
-            <h2>Our latest work</h2>
-            <p>
-              Clean strategy, premium design, and measurable impact across brand, web, content, and digital campaigns.
-            </p>
-          </div>
-
-          <div class="filter-bar" aria-label="Project categories">
-            <button class="filter active" data-filter="all">All</button>
-            <button class="filter" data-filter="web">Web Design</button>
-            <button class="filter" data-filter="branding">Branding</button>
-            <button class="filter" data-filter="video">Video</button>
-            <button class="filter" data-filter="content">Content</button>
-          </div>
-
-          <div class="projects">
-            <article class="project-card" data-category="web">
-              <div class="project-image">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Luxury property website" />
+          
+          <!-- Project Card 2 -->
+          <div class="col-md-6 col-lg-4 project-item branding" data-aos="zoom-in" data-aos-delay="100">
+            <div class="project-card">
+              <img src="./Assets/featured-products/branding.jpg" alt="Branding Project" />
+              <div class="card-body">
+                <span class="category-tag">Branding</span>
+                <h5 class="card-title">Artisan Coffee Identity</h5>
+                <p class="card-text">Complete visual identity for an urban cafe brand.</p>
+                <button class="btn btn-view-case-study" data-bs-toggle="modal" data-bs-target="#projectModal" 
+                        data-title="Artisan Coffee Identity" data-category="Branding" 
+                        data-image="./Assets/featured-products/branding.jpg"
+                        data-description="Crafting a unique logo, color palette, and packaging that resonates with coffee lovers.">View Details</button>
               </div>
-              <div class="project-body">
-                <span class="tag">Web Design</span>
-                <h3>Luxury Property Platform</h3>
-                <p>High-end real estate experience with immersive visuals and lead-focused conversion flow.</p>
-                <a href="#contact" class="project-link">View case study →</a>
-              </div>
-            </article>
-
-            <article class="project-card" data-category="branding">
-              <div class="project-image">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Brand identity design" />
-              </div>
-              <div class="project-body">
-                <span class="tag">Branding</span>
-                <h3>Artisan Coffee Identity</h3>
-                <p>Brand refresh with a premium story, memorable tone, and packaging system built for visibility.</p>
-                <a href="#contact" class="project-link">View case study →</a>
-              </div>
-            </article>
-
-            <article class="project-card" data-category="video">
-              <div class="project-image">
-                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="Commercial video production" />
-              </div>
-              <div class="project-body">
-                <span class="tag">Video</span>
-                <h3>Brand Storytelling Campaign</h3>
-                <p>Cinematic commercial production and editing crafted to showcase value and build trust.</p>
-                <a href="#contact" class="project-link">View case study →</a>
-              </div>
-            </article>
-
-            <article class="project-card" data-category="content">
-              <div class="project-image">
-                <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?auto=format&fit=crop&w=1200&q=80" alt="Social media content design" />
-              </div>
-              <div class="project-body">
-                <span class="tag">Content</span>
-                <h3>Social Growth System</h3>
-                <p>Creative content strategy and campaign visuals designed to spark engagement and brand recall.</p>
-                <a href="#contact" class="project-link">View case study →</a>
-              </div>
-            </article>
-
-            <article class="project-card" data-category="web">
-              <div class="project-image">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="Business website design" />
-              </div>
-              <div class="project-body">
-                <span class="tag">Web Design</span>
-                <h3>Consulting Business Website</h3>
-                <p>Sharper positioning, custom UX flow, and content strategy tuned for lead generation.</p>
-                <a href="#contact" class="project-link">View case study →</a>
-              </div>
-            </article>
-
-            <article class="project-card" data-category="branding">
-              <div class="project-image">
-                <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80" alt="Branding and campaign materials" />
-              </div>
-              <div class="project-body">
-                <span class="tag">Branding</span>
-                <h3>Launch Campaign Identity</h3>
-                <p>Visual system and message framework created to position a growing startup for market entry.</p>
-                <a href="#contact" class="project-link">View case study →</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-head">
-            <h2>Why brands choose us</h2>
-            <p>We combine strategy, storytelling, design, and execution to build work that performs.</p>
-          </div>
-
-          <div class="feature-grid">
-            <article class="feature">
-              <div class="feature-icon">✦</div>
-              <h3>Creative direction</h3>
-              <p>Distinct visuals and sharper messaging that make your brand memorable from first impression.</p>
-            </article>
-
-            <article class="feature">
-              <div class="feature-icon">▣</div>
-              <h3>Conversion focus</h3>
-              <p>Every page, campaign, and asset is shaped to move people from interest to action.</p>
-            </article>
-
-            <article class="feature">
-              <div class="feature-icon">⚡</div>
-              <h3>Fast execution</h3>
-              <p>Our process is structured for speed without compromising polish, clarity, or quality.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-head">
-            <h2>How we work</h2>
-            <p>A simple, rigorous process built to keep the project clear, collaborative, and focused on results.</p>
-          </div>
-
-          <div class="process-grid">
-            <div class="step">
-              <div class="step-number">01</div>
-              <h3>Discover</h3>
-              <p>We learn your goals, audience, and positioning so the work aligns with real business needs.</p>
             </div>
+          </div>
 
-            <div class="step">
-              <div class="step-number">02</div>
-              <h3>Design</h3>
-              <p>We shape the visual language, messaging, and user journey into a polished creative direction.</p>
-            </div>
-
-            <div class="step">
-              <div class="step-number">03</div>
-              <h3>Build</h3>
-              <p>We execute the website, assets, and experience with technical precision and creative consistency.</p>
-            </div>
-
-            <div class="step">
-              <div class="step-number">04</div>
-              <h3>Launch</h3>
-              <p>We refine the final details and launch with a clear plan for growth, visibility, and traction.</p>
+          <!-- Project Card 3 -->
+          <div class="col-md-6 col-lg-4 project-item videography" data-aos="zoom-in" data-aos-delay="200">
+            <div class="project-card">
+              <img src="./Assets/featured-products/videography.jpg" alt="Video Project" />
+              <div class="card-body">
+                <span class="category-tag">Videography</span>
+                <h5 class="card-title">Brand Storytelling</h5>
+                <p class="card-text">Cinematic commercial for a tech startup.</p>
+                <button class="btn btn-view-case-study" data-bs-toggle="modal" data-bs-target="#projectModal" 
+                        data-title="Brand Storytelling" data-category="Videography" 
+                        data-image="./Assets/featured-products/videography.jpg"
+                        data-description="High-definition video production capturing the core values of innovation.">View Details</button>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="section-head">
-            <h2>Client feedback</h2>
-            <p>Trusted by businesses that wanted a stronger digital presence and a sharper market position.</p>
-          </div>
-
-          <div class="testimonial-grid">
-            <article class="testimonial">
-              <div class="stars">★★★★★</div>
-              <p>“Guru Creations gave our brand the clarity and polish it needed. The work feels premium, strategic, and incredibly effective.”</p>
-              <div class="person">
-                <div class="avatar">AS</div>
-                <div>
-                  <strong>Alicia Stone</strong>
-                  <small>Founder, Studio North</small>
-                </div>
-              </div>
-            </article>
-
-            <article class="testimonial">
-              <div class="stars">★★★★★</div>
-              <p>“Their process was seamless, and the final result genuinely elevated how customers see our business online.”</p>
-              <div class="person">
-                <div class="avatar">DK</div>
-                <div>
-                  <strong>Daniel King</strong>
-                  <small>CEO, Peak Advisory</small>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="cta" id="contact">
-        <div class="container">
-          <div class="cta-box">
-            <div>
-              <h3>Ready to build something that stands out?</h3>
-              <p>Let’s turn your next idea into a premium digital experience.</p>
+        <!-- Stats Section -->
+        <section class="optional-section stats-counter mt-5" data-aos="fade-up">
+          <div class="row text-center">
+            <div class="col-6 col-md-3">
+              <div class="number" data-target="150">0</div>
+              <div class="label">Projects Done</div>
             </div>
-            <a href="mailto:gurucreations@gmail.com" class="btn btn-primary">Start your project</a>
+            <div class="col-6 col-md-3">
+              <div class="number" data-target="95">0</div>
+              <div class="label">Happy Clients</div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="number" data-target="12">0</div>
+              <div class="label">Awards Won</div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="number" data-target="5">0</div>
+              <div class="label">Years Experience</div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>© 2025 Guru Creations. All rights reserved.</div>
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="PORTFOLIO.HTML">Portfolio</a>
-          <a href="WEB DESIGN.HTML">Web Design</a>
-          <a href="blog1.html">Blog</a>
+    <!-- CTA Section -->
+    <section class="cta-section text-center" data-aos="fade-up">
+      <div class="container">
+        <h2>Have a project in mind?</h2>
+        <p class="mb-4">Let's turn your vision into digital reality.</p>
+        <a href="index.html#contact" class="btn btn-light btn-lg rounded-pill px-5">Get In Touch</a>
+      </div>
+    </section>
+
+    <section id="live-projects" class="section reveal">
+      <h2 class="title">Live Projects</h2>
+      <div class="gallery">
+        <a href="https://denniskibetporfolio.netlify.app/" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/600x400/1a1a2e/ffffff?text=DennisKibet+Portfolio" alt="Dennis Kibet Portfolio" class="gallery-item">
+        </a>
+        <a href="https://ambroseoliver.github.io/FRIENDS-KABETE-LOCAL-CHURCH-/" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/600x400/1a1a2e/ffffff?text=Friends+Kabete+Church" alt="Friends Kabete Church" class="gallery-item">
+        </a>
+      </div>
+      <div style="max-width:900px;margin:20px auto;text-align:center;color:#ccc;">
+        <p>Click any project to open the live site in a new tab.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-0">
+      <div class="container">
+        <div class="row py-4">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <img src="Assets/logo-1.png" alt="Logo" class="footer-logo mb-3" width="50" />
+            <p>Empowering brands with innovative digital media solutions.</p>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+              <li><a href="portfolio.html" class="text-white text-decoration-none">Portfolio</a></li>
+              <li><a href="blog1.html" class="text-white text-decoration-none">Blog</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom text-center pt-3 border-top border-secondary">
+          <p>&copy; 2025 Guru Creations Media. All rights reserved.</p>
         </div>
       </div>
     </footer>
 
-    <script>
-      const filters = document.querySelectorAll('.filter');
-      const cards = document.querySelectorAll('.project-card');
+    <!-- Modal for Project Details -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModalLabel">Project Case Study</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalProjectImage" src="" alt="Project" class="img-fluid rounded mb-4" />
+            <h3 id="modalProjectTitle" class="gradient-text"></h3>
+            <p class="text-muted small mb-3">Category: <span id="modalProjectCategory"></span></p>
+            <p id="modalProjectDescription"></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      filters.forEach((button) => {
-        button.addEventListener('click', () => {
-          filters.forEach((btn) => btn.classList.remove('active'));
-          button.classList.add('active');
+    <!-- Back to top -->
+    <button id="back-to-top-btn" aria-label="Back to top">▲</button>
 
-          const selected = button.dataset.filter;
-          cards.forEach((card) => {
-            const isVisible = selected === 'all' || card.dataset.category === selected;
-            card.style.display = isVisible ? 'block' : 'none';
-          });
-        });
-      });
-    </script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="./JS/main.js"></script>
+    <script src="./JS/portfolio.js"></script>
   </body>
 </html>
