@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Guru Creations projects across web design, branding, photography, video and digital media.">
+  <title>Selected Work | Guru Creations</title>
+  <link rel="icon" href="Assets/logo-1.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/portfolio-page.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <img src="Assets/logo-1.png" alt="" width="40" height="40">
+        <span>Guru <strong>Creations</strong></span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" aria-current="page">Portfolio</a>
+        <a href="web-design.html">Web Design</a>
+        <a class="nav-cta" href="booking.html">Start a project</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="portfolio-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Selected work</p>
+        <h1>Ideas made<br><span>visible.</span></h1>
+        <p>Explore a selection of the visual stories, digital experiences and creative work we make for growing brands.</p>
+        <a class="button button-primary" href="#work">Explore the work <span aria-hidden="true">&darr;</span></a>
+      </div>
+      <div class="hero-image">
+        <img src="Assets/hero-section-one.webp" alt="A behind-the-scenes view of creative production">
+        <span class="image-note">Creative work.<br>Made with purpose.</span>
+      </div>
+    </section>
+
+    <section class="work-section" id="work">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">The portfolio</p>
+          <h2>Different stories.<br>One creative partner.</h2>
+        </div>
+        <p>Explore our creative services, media guidance, technology solutions and product offerings.</p>
+      </div>
+
+      <label class="search-field">
+        <span class="visually-hidden">Search projects</span>
+        <span aria-hidden="true">&#9906;</span>
+        <input id="project-search" type="search" placeholder="Search projects..." autocomplete="off">
+      </label>
+
+      <div class="filter-list" role="group" aria-label="Filter projects by service">
+        <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">All work</button>
+        <button type="button" class="filter-button" data-filter="computers-monitors" aria-pressed="false">Computers &amp; monitors</button>
+        <button type="button" class="filter-button" data-filter="media-consulting" aria-pressed="false">Media consulting</button>
+        <button type="button" class="filter-button" data-filter="media-planning" aria-pressed="false">Media planning</button>
+        <button type="button" class="filter-button" data-filter="technology-development" aria-pressed="false">Technology &amp; development</button>
+        <button type="button" class="filter-button" data-filter="web-design" aria-pressed="false">Web design</button>
+        <button type="button" class="filter-button" data-filter="branding" aria-pressed="false">Branding</button>
+        <button type="button" class="filter-button" data-filter="graphic-design" aria-pressed="false">Graphic design</button>
+        <button type="button" class="filter-button" data-filter="livestreaming" aria-pressed="false">Livestreaming</button>
+        <button type="button" class="filter-button" data-filter="photography" aria-pressed="false">Photography</button>
+        <button type="button" class="filter-button" data-filter="videography" aria-pressed="false">Videography</button>
+        <button type="button" class="filter-button" data-filter="social-media" aria-pressed="false">Social media</button>
+      </div>
+
+      <p class="results-count" id="project-count" aria-live="polite"></p>
+      <div class="project-grid" id="project-grid" aria-live="polite">
+        <article class="project-card" data-category="computers-monitors">
+          <div class="tech-product-visual" role="img" aria-label="Illustration of a desktop monitor and laptop computer">
+            <div class="monitor-device">
+              <span class="monitor-screen"><span>G</span></span>
+              <span class="monitor-stand"></span>
+              <span class="monitor-base"></span>
+            </div>
+            <div class="laptop-device">
+              <span class="laptop-screen"><span></span><span></span><span></span></span>
+              <span class="laptop-base"></span>
+            </div>
+          </div>
+          <div class="project-info">
+            <p class="project-category">Computers &amp; monitors</p>
+            <h3>Computers and monitors</h3>
+            <p>We sell computers and monitors for work, study and everyday use. Contact us to ask what is currently available.</p>
+            <a class="project-link" href="https://wa.me/254700545425?text=Hello%2C%20I%27m%20interested%20in%20the%20computers%20and%20monitors%20you%20sell.">Ask about availability <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="media-consulting">
+          <img src="Assets/featured-products/social-media-startegy.jpg" alt="Media strategy planning" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Media consulting</p>
+            <h3>Media strategy &amp; consulting</h3>
+            <p>Get practical guidance on choosing the right channels, shaping your message and making your media work together.</p>
+            <a class="project-link" href="booking.html">Discuss media consulting <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="media-planning">
+          <img src="Assets/featured-products/social-media-marketing.jpg" alt="Media campaign planning and content" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Media planning</p>
+            <h3>Media planning &amp; campaigns</h3>
+            <p>Plan what to share, where to publish it and when, with a clear schedule built around your audience and goals.</p>
+            <a class="project-link" href="booking.html">Plan your media <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="technology-development">
+          <img src="Assets/featured-products/website-photo.jpg" alt="Digital technology and website development" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Technology &amp; development</p>
+            <h3>Technology &amp; digital development</h3>
+            <p>Explore web development and practical digital solutions to support the way your business works and grows.</p>
+            <a class="project-link" href="booking.html">Discuss a tech project <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web-design">
+          <img src="Assets/featured-products/website-photo.jpg" alt="Website design project" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Web design</p>
+            <h3>Business website experience</h3>
+            <p>A clean, responsive web presence designed to make a business and its services easy to understand.</p>
+            <a class="project-link" href="web-design.html">Explore web design <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web-design">
+          <img src="Assets/featured-products/ecommerce.jpg" alt="E-commerce website design" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Web design</p>
+            <h3>E-commerce storefront</h3>
+            <p>A product-first online shop concept with clear browsing and a straightforward path to purchase.</p>
+            <a class="project-link" href="web-design.html">Explore web design <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="branding">
+          <img src="Assets/featured-products/branding.jpg" alt="Brand identity design" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Branding</p>
+            <h3>Visual identity direction</h3>
+            <p>A considered set of brand visuals built to make a consistent impression across platforms.</p>
+            <a class="project-link" href="booking.html">Discuss a brand project <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="graphic-design">
+          <img src="Assets/featured-products/graphic-design.jpg" alt="Graphic design and visual communication" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Graphic design</p>
+            <h3>Graphic design collection</h3>
+            <p>Purposeful visual communication for campaigns, announcements and everyday brand content.</p>
+            <a class="project-link" href="booking.html">Discuss a design project <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="graphic-design">
+          <img src="Assets/featured-products/poster-pic.jpg" alt="Promotional poster artwork" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Graphic design</p>
+            <h3>Promotional poster artwork</h3>
+            <p>A bold, focused layout that gives campaign information a clear visual hierarchy.</p>
+            <a class="project-link" href="booking.html">Discuss a design project <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="livestreaming">
+          <img src="Assets/featured-products/Livestream.jpg" alt="Livestream production equipment" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Livestreaming</p>
+            <h3>Live production setup</h3>
+            <p>Camera and production support to help live events look polished and feel engaging.</p>
+            <a class="project-link" href="booking.html">Plan a livestream <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="photography">
+          <img src="Assets/featured-products/Photography.jpg" alt="Photography project" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Photography</p>
+            <h3>Photography for your story</h3>
+            <p>Thoughtful imagery created to bring people, products and places into focus.</p>
+            <a class="project-link" href="booking.html">Plan a photo shoot <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="photography">
+          <img src="Assets/featured-products/guru-photo.jpg" alt="Portrait photography" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Photography</p>
+            <h3>Portraits with personality</h3>
+            <p>Natural portraits that help put a face and a human story behind a brand.</p>
+            <a class="project-link" href="booking.html">Plan a photo shoot <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="videography">
+          <img src="Assets/featured-products/videography.jpg" alt="Video production project" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Videography</p>
+            <h3>Video production</h3>
+            <p>Clear, story-led video content made to introduce a business, service or idea.</p>
+            <a class="project-link" href="booking.html">Plan a video project <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="videography">
+          <img src="Assets/featured-products/environmental-documentary-short.jpg" alt="Environmental documentary film project" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Videography</p>
+            <h3>Documentary storytelling</h3>
+            <p>A documentary-style approach that gives real people, places and ideas room to speak.</p>
+            <a class="project-link" href="booking.html">Plan a video project <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="videography">
+          <img src="Assets/featured-products/vidography-final.jpg" alt="Cinematic video production" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Videography</p>
+            <h3>Cinematic brand visuals</h3>
+            <p>Visual storytelling designed to capture atmosphere, detail and the character of a brand.</p>
+            <a class="project-link" href="booking.html">Plan a video project <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="social-media">
+          <img src="Assets/featured-products/social-media-startegy.jpg" alt="Social media strategy work" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Social media</p>
+            <h3>Social media direction</h3>
+            <p>A more consistent approach to what a brand shares and how it speaks to its audience.</p>
+            <a class="project-link" href="booking.html">Plan a social strategy <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="social-media">
+          <img src="Assets/featured-products/social-media-marketing.jpg" alt="Social media marketing creative" loading="lazy" decoding="async">
+          <div class="project-info">
+            <p class="project-category">Social media</p>
+            <h3>Social campaign creative</h3>
+            <p>Campaign-ready creative that keeps the message clear and the brand recognizable.</p>
+            <a class="project-link" href="booking.html">Plan a social campaign <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>No projects match that search. Try another phrase or category.</p>
+    </section>
+
+    <section class="closing-cta">
+      <p class="eyebrow">Let’s create</p>
+      <h2>Your next project could be here.</h2>
+      <p>Tell us what you are building and we’ll help you choose the right creative approach.</p>
+      <a class="button button-light" href="booking.html">Start a conversation <span aria-hidden="true">&rarr;</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="index.html">
+      <img src="Assets/logo-1.png" alt="" width="36" height="36">
+      <span>Guru <strong>Creations</strong></span>
+    </a>
+    <p>&copy; 2026 Guru Creations. Your success, our passion.</p>
+    <a href="index.html">Back to the main website</a>
+  </footer>
+
+  <script src="JS/PORTFOLIO.JS"></script>
+</body>
+</html>

@@ -1,23 +1,65 @@
 [
   {
-    "title": "5 Livestreaming Hacks to Boost Engagement",
-    "excerpt": "Want to keep viewers hooked during your livestreams? Here are 5 proven hacks you can use right now...",
-    "content": "Livestreaming is one of the fastest ways to build an online community. To boost engagement:\n1. Interact with your viewers in real-time.\n2. Use overlays and visuals for branding.\n3. Schedule streams consistently.\n4. Offer giveaways or shoutouts.\n5. Repurpose streams into short clips.\n\nThese small changes will keep your audience glued to your content.",
-    "category": "Streaming",
-    "image": "https://source.unsplash.com/600x400/?streaming,tech"
+    "title": "Why Football’s Best Teams Make Space Before They Find It",
+    "excerpt": "Modern football is increasingly a contest over space, timing and the movement that happens before the pass.",
+    "content": "A team can dominate possession and still struggle to create a clear chance. The difference is often what happens away from the ball: a forward pins a defender, a midfielder moves into a passing lane, or a full-back pulls the opposition wider.\n\nThese movements create space for someone else to use. Good pressing works on the same principle in reverse: coordinated runs close passing options and force play into less dangerous areas.\n\nWhen watching a match, follow a player who is not on the ball for a few minutes. Their movement can explain why a passing lane opens, why a defender steps out, or how a team creates an overload. It is a useful way to see the tactical conversation underneath the highlights.",
+    "category": "Football",
+    "image": "Assets/hero-section-one.webp"
   },
   {
-    "title": "Photography Tips Every Creator Should Know",
-    "excerpt": "Photography is more than just pressing the shutter button. Learn the core techniques that transform shots into art...",
-    "content": "Photography is storytelling with light. Every creator should:\n1. Master the rule of thirds.\n2. Play with natural light.\n3. Use leading lines to draw focus.\n4. Edit minimally to retain authenticity.\n5. Shoot consistently to improve.\n\nThese tips will level up your content creation game immediately.",
-    "category": "Photography",
-    "image": "https://source.unsplash.com/600x400/?photography,camera"
+    "title": "African Football’s Next Chapter Is About More Than Talent",
+    "excerpt": "Player development, coaching, facilities and sustainable club structures all shape what comes next for African football.",
+    "content": "The conversation about African football often starts with the exceptional talent produced across the continent. Building on that talent requires a broader system: quality coaching at different ages, dependable pitches and facilities, strong local competitions, and clubs able to plan beyond a single season.\n\nPathways matter too. Young players benefit when they can see realistic routes from grassroots football into senior teams, and when education and player welfare remain part of that journey.\n\nProgress is not one breakthrough or one tournament. It is the patient work of creating environments where players, coaches, clubs and local communities can keep improving together.",
+    "category": "Football",
+    "image": "Assets/featured-products/videography.jpg"
   },
   {
-    "title": "How to Turn Your Passion Into a Profitable Brand",
-    "excerpt": "Your skills can become your income stream. Here’s how to brand yourself for success...",
-    "content": "Turning passion into profit requires strategy:\n1. Identify your unique value.\n2. Create consistent content.\n3. Build a loyal audience.\n4. Leverage multiple income streams (ads, merch, courses).\n5. Network with like-minded creators.\n\nWith persistence, your personal brand can grow into a profitable business.",
-    "category": "Business",
-    "image": "https://source.unsplash.com/600x400/?business,success"
+    "title": "The Transfer Rumour Economy: What to Check Before You Share",
+    "excerpt": "Transfer windows bring excitement and speculation. A few quick checks can help separate sourced reporting from recycled claims.",
+    "content": "A transfer rumour can travel around social media long before its origin is clear. Before sharing one, look for the original source, check whether the report names its evidence, and see if independent outlets with a track record have confirmed it.\n\nBe cautious with cropped screenshots, unsourced quotes and posts that turn a vague possibility into a done deal. Old stories can also resurface without their original date or context.\n\nFollowing rumours can be part of the fun, but labelling speculation as speculation keeps the conversation more honest and gives fans a clearer picture of what is actually known.",
+    "category": "Football",
+    "image": "Assets/featured-products/social-media-startegy.jpg"
+  },
+  {
+    "title": "How Short-Form Video Is Changing the Way Fans Follow Football",
+    "excerpt": "Clips make moments easy to discover, but the full story of a match still lives beyond a short highlight.",
+    "content": "Short-form video has made football moments easier to find and share. A brilliant goal, a tactical sequence or a fan reaction can reach people who did not watch the full match.\n\nThe format also changes what gets attention. A clip needs a strong opening, clear context and captions that work with sound off. Publishers should identify the match and moment, credit the source appropriately, and avoid editing that changes what happened.\n\nHighlights are a useful entry point, not a replacement for the complete game. The most thoughtful football coverage uses short video to invite people into the wider story: the build-up, the tactics and the reactions that followed.",
+    "category": "Digital Culture",
+    "image": "Assets/featured-products/videography.jpg"
+  },
+  {
+    "title": "The Creator Economy Is Growing Up: Trust Beats Reach",
+    "excerpt": "A large audience can get attention. Clear expertise and an honest relationship are what help creators keep it.",
+    "content": "Audience size is an easy number to see, but it does not tell the whole story. People pay attention to creators who are consistent, useful and open about what they know.\n\nFor a creator, that can mean choosing a subject they can return to over time, explaining why they recommend a product, and correcting mistakes rather than quietly moving on. For a business, it means choosing partners because their audience and point of view fit—not only because a follower count looks impressive.\n\nTrust takes time to build and can be lost quickly. It is a more durable foundation for a creator-led project than chasing every viral moment.",
+    "category": "Creator Economy",
+    "image": "Assets/featured-products/Photography.jpg"
+  },
+  {
+    "title": "AI Tools for Creators: Use the Shortcut, Keep the Judgment",
+    "excerpt": "AI can help with repetitive parts of creative work, but people still need to guide, verify and take responsibility for the result.",
+    "content": "AI tools can help creators brainstorm, organize research, generate rough outlines or handle repetitive production tasks. Used well, they can make more room for the parts of a project that need human judgment.\n\nStart with a defined task and check every factual claim, image, quotation and recommendation before publishing. Do not enter private client information into a service unless you understand its data practices and have permission. Be transparent when an AI-generated element materially affects how an audience should interpret the work.\n\nThe useful question is not whether to use AI for everything. It is whether a tool improves the work without weakening accuracy, originality, privacy or trust.",
+    "category": "AI & Technology",
+    "image": "Assets/graphic-design-image-with-headphones.webp"
+  },
+  {
+    "title": "A Simple Media Plan for a Small Team",
+    "excerpt": "A realistic publishing rhythm starts with audience needs, the time you actually have and a few repeatable content themes.",
+    "content": "A media plan does not need to be complicated to be useful. First, decide who you want to reach and what you want your communication to help them do. Choose a small number of themes you can speak about with real knowledge.\n\nNext, pick the channels you can maintain well. Set a schedule that fits your available time, assign someone to prepare and review each post, and leave space for timely opportunities. Reuse a strong idea in different formats, but adapt it to the channel rather than copying and pasting everywhere.\n\nReview meaningful signals such as conversations, saves, enquiries and repeat engagement. Use what you learn to adjust the next month instead of treating the calendar as a rigid checklist.",
+    "category": "Media & Marketing",
+    "image": "Assets/featured-products/social-media-marketing.jpg"
+  },
+  {
+    "title": "Livestreaming Is Better When It Feels Like a Conversation",
+    "excerpt": "Reliable production matters, but a clear host and genuine audience interaction make a live stream worth staying for.",
+    "content": "Good sound, steady lighting and a tested internet connection help viewers stay focused. A clear host and a welcoming format give them a reason to participate.\n\nTell people what the stream will cover before it starts. During the broadcast, explain transitions, invite questions and make room for the audience without losing the thread. A simple run sheet can keep the event on track while leaving space for spontaneous moments.\n\nAfter the stream, share a useful recap or a few accurately captioned clips for people who could not attend. Treat the replay as another way to serve the audience, not just an archive.",
+    "category": "Digital Culture",
+    "image": "Assets/livestream-photo.webp"
+  },
+  {
+    "title": "Digital Privacy Is Becoming Part of Good Brand Practice",
+    "excerpt": "As people pay closer attention to how their information is used, clear and respectful data practices are a competitive advantage.",
+    "content": "Trust online depends on more than what a business says. Visitors notice whether a site asks for information it does not need, whether privacy choices are understandable, and whether they can change their minds later.\n\nCollect only the information needed for a clear purpose. Explain how it will be used, keep access limited and protect it appropriately. Make marketing preferences easy to manage, and check that forms and analytics tools match your privacy commitments.\n\nThese steps are good practice for businesses of any size. They make the digital experience clearer for customers and help teams understand what responsibilities come with the tools they use.",
+    "category": "AI & Technology",
+    "image": "Assets/featured-products/website-photo.jpg"
   }
 ]

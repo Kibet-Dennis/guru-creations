@@ -2,83 +2,229 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guru Creations Blog</title>
-
-  <!-- Bootstrap & Fonts -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  
-  <!-- Custom CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Independent insights on football, digital culture, creators, social media and technology.">
+  <title>The Current | Football, Culture &amp; Ideas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="CSS/blog1.css">
-
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Guru Creations</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Main Website</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">Blog</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero-section text-center text-white">
-    <div class="container">
-      <h1 class="display-4">Guru Creations Blog</h1>
-      <p class="lead">Insights, tips & strategies to grow your digital presence</p>
-    </div>
+  <header class="site-header" id="top">
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="brand" aria-label="The Current journal">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span>THE <strong>CURRENT</strong><small>FOOTBALL · CULTURE · IDEAS</small></span>
+      </div>
+      <div class="nav-links">
+        <a href="#articles">Latest stories</a>
+        <a href="#topics">Explore topics</a>
+        <a href="#contribute">Write for us</a>
+        <a href="#about">About this journal</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- Search & Filter -->
-  <section class="search-filter py-4">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <input type="text" id="search" class="form-control mb-2 mb-md-0" placeholder="Search blog posts...">
-      <select id="category-filter" class="form-control ml-md-3">
-        <option value="all">All Categories</option>
-        <option value="social">Social Media</option>
-        <option value="branding">Branding</option>
-        <option value="tech">Tech</option>
-      </select>
-    </div>
-  </section>
-
-  <!-- Blog Posts -->
-  <section class="blog-posts py-5">
-    <div class="container">
-      <div class="row" id="blog-posts">
-        <!-- Blog cards will load here from posts.json -->
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Football · Culture · Technology</p>
+        <h1>Stories behind<br><span>what’s happening.</span></h1>
+        <p class="hero-copy">Football insights, digital culture and ideas worth understanding — with context beyond the headline.</p>
+        <a class="button button-primary" href="#articles">Read the latest stories <span aria-hidden="true">&rarr;</span></a>
       </div>
-    </div>
-  </section>
+      <div class="hero-art" aria-hidden="true">
+        <img src="Assets/hero-section-one.webp" alt="">
+        <div class="hero-stamp">LOOK<br>CLOSER<br>THINK<br>DEEPER</div>
+      </div>
+    </section>
 
-  <!-- Modal for Full Post -->
-  <div class="modal fade" id="postModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="postModalLabel"></h5>
-          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+    <section class="articles-section" id="articles">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">The latest</p>
+          <h2>Stories in the conversation.</h2>
         </div>
-        <div class="modal-body" id="postModalBody"></div>
+        <p class="section-intro">Football, creators, social platforms, technology and the culture connecting them.</p>
       </div>
-    </div>
-  </div>
 
-  <!-- Footer -->
-  <footer class="footer bg-dark text-white text-center py-3">
-    <p>&copy; 2025 Guru Creations | Your Success, Our Passion</p>
+      <div class="article-tools" id="topics">
+        <label class="search-field">
+          <span class="visually-hidden">Search articles</span>
+          <span class="search-icon" aria-hidden="true">&#9906;</span>
+          <input type="search" id="search" placeholder="Search articles..." autocomplete="off">
+        </label>
+        <label class="category-field">
+          <span class="visually-hidden">Filter articles by topic</span>
+          <select id="category-filter">
+            <option value="all">All topics</option>
+          </select>
+        </label>
+      </div>
+
+      <p class="results-count" id="results-count" aria-live="polite"></p>
+      <div class="article-grid" id="blog-posts" aria-live="polite">
+        <p class="loading-message">Loading the latest insights...</p>
+      </div>
+    </section>
+
+    <section class="contribute-section" id="contribute">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Write for The Current</p>
+          <h2>Have a story worth sharing?</h2>
+        </div>
+        <p>Submit an original post and choose how long you want it featured. It will publish after payment is confirmed.</p>
+      </div>
+
+      <details class="contribute-details" id="contribute-details">
+        <summary class="button button-primary contribute-toggle">
+          Open writer details <span aria-hidden="true">&darr;</span>
+        </summary>
+        <div class="contribute-content">
+      <div class="plan-grid" aria-label="Paid publishing plans">
+        <div class="plan-card">
+          <span>24 hours</span>
+          <strong>$2</strong>
+          <small>One-day feature</small>
+        </div>
+        <div class="plan-card">
+          <span>3 days</span>
+          <strong>$5</strong>
+          <small>Save $1</small>
+        </div>
+        <div class="plan-card">
+          <span>1 week</span>
+          <strong>$10</strong>
+          <small>Save $4</small>
+        </div>
+        <div class="plan-card">
+          <span>1 month</span>
+          <strong>$25</strong>
+          <small>Save $35</small>
+        </div>
+      </div>
+
+      <form class="submission-form" id="submission-form">
+        <div class="form-heading">
+          <h3>Submit your post</h3>
+          <p>We’ll take you to payment before your post goes live.</p>
+        </div>
+        <div class="form-grid">
+          <label>
+            <span>Your name</span>
+            <input name="author_name" type="text" maxlength="80" autocomplete="name" required>
+          </label>
+          <label>
+            <span>Email address</span>
+            <input name="author_email" type="email" maxlength="254" autocomplete="email" required>
+          </label>
+          <label class="form-wide">
+            <span>Post title</span>
+            <input name="title" type="text" minlength="8" maxlength="120" required>
+          </label>
+          <label>
+            <span>Topic</span>
+            <select name="category" required>
+              <option value="Football">Football</option>
+              <option value="Digital Culture">Digital Culture</option>
+              <option value="Creator Economy">Creator Economy</option>
+              <option value="AI & Technology">AI &amp; Technology</option>
+              <option value="Media & Marketing">Media &amp; Marketing</option>
+              <option value="Trending Topics">Trending Topics</option>
+              <option value="Politics & Elections">Politics &amp; Elections</option>
+            </select>
+          </label>
+          <label>
+            <span>How long should it be featured?</span>
+            <select name="plan" id="submission-plan" required>
+              <option value="24h">24 hours — $2</option>
+              <option value="3d">3 days — $5 (save $1)</option>
+              <option value="7d">1 week — $10 (save $4)</option>
+              <option value="30d">1 month — $25 (save $35)</option>
+            </select>
+          </label>
+          <fieldset class="form-wide payment-options">
+            <legend>Choose how to pay</legend>
+            <label><input type="radio" name="provider" value="mpesa" required> M-Pesa</label>
+            <label><input type="radio" name="provider" value="stripe"> Card</label>
+            <label><input type="radio" name="provider" value="paypal"> PayPal</label>
+          </fieldset>
+          <label class="form-wide mpesa-phone" id="mpesa-phone-field" hidden>
+            <span>M-Pesa phone number</span>
+            <input name="phone" type="tel" autocomplete="tel" placeholder="e.g. 2547XXXXXXXX" pattern="^(?:\+?254|0)?7\d{8}$">
+            <small>We’ll send a payment request to this number. The M-Pesa amount is converted from USD at checkout.</small>
+          </label>
+          <label class="form-wide">
+            <span>Short summary</span>
+            <textarea name="excerpt" minlength="30" maxlength="240" rows="3" required></textarea>
+          </label>
+          <label class="form-wide">
+            <span>Your article</span>
+            <textarea name="content" minlength="300" maxlength="12000" rows="10" required></textarea>
+            <small>Submit original, factual writing. Your post is published after payment confirmation and stays live for the period you select.</small>
+          </label>
+          <label class="form-wide">
+            <span>Photos or political poster artwork (optional, up to 5)</span>
+            <input id="post-photos" name="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+            <small>JPEG, PNG or WebP. Maximum 10 MB per image. Text embedded in poster images is not automatically scanned.</small>
+          </label>
+          <label class="form-wide">
+            <span>Video (optional, 1 maximum)</span>
+            <input id="post-video" name="video" type="file" accept="video/mp4,video/webm">
+            <small>MP4 or WebM. Maximum 100 MB. Text embedded in video is not automatically scanned.</small>
+          </label>
+        </div>
+        <p class="selected-media" id="media-selection-status" aria-live="polite"></p>
+        <p class="submission-status" id="submission-status" role="status" aria-live="polite"></p>
+        <p class="submission-config-notice" id="publishing-config-notice" hidden>
+          Submissions are paused until the site owner connects a Supabase project, deploys the publishing functions,
+          and configures a payment provider. The public project URL and anon key belong in
+          <code>JS/blog-config.js</code>; payment and service-role secrets must stay in Supabase Function Secrets.
+          Test provider sandbox payments before enabling submissions.
+        </p>
+        <button class="button button-primary submit-button" id="submission-submit" type="submit">
+          Continue to payment <span aria-hidden="true">&rarr;</span>
+        </button>
+      </form>
+        </div>
+      </details>
+    </section>
+
+    <section class="closing-cta" id="about">
+      <p class="eyebrow">About The Current</p>
+      <h2>More context. Better conversations.</h2>
+      <p>An independent journal exploring the stories, shifts and ideas shaping sport and digital life. We focus on analysis and perspective, not live news updates.</p>
+      <a class="button button-light" href="#articles">Explore all stories <span aria-hidden="true">&uarr;</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">C</span>
+      <span>THE <strong>CURRENT</strong><small>FOOTBALL · CULTURE · IDEAS</small></span>
+    </div>
+    <p>&copy; 2026 The Current. Independent stories and perspectives.</p>
+    <a href="#top" class="back-to-top">Back to top <span aria-hidden="true">&uarr;</span></a>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <dialog class="post-dialog" id="post-dialog" aria-labelledby="dialog-title">
+    <form method="dialog" class="dialog-actions">
+      <button class="dialog-close" aria-label="Close article">&times;</button>
+    </form>
+    <img class="dialog-image" id="dialog-image" src="" alt="">
+    <article class="dialog-content">
+      <p class="eyebrow" id="dialog-category"></p>
+      <h2 id="dialog-title"></h2>
+      <p class="dialog-author" id="dialog-author"></p>
+      <div class="dialog-body" id="dialog-body"></div>
+      <div class="dialog-media" id="dialog-media"></div>
+    </article>
+  </dialog>
+
+  <script src="JS/blog-config.js"></script>
+  <script src="JS/content-moderation.js"></script>
   <script src="JS/blog1.js"></script>
 </body>
 </html>
